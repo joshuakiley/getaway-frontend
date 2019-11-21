@@ -1,3 +1,21 @@
+a {
+  text-align: left;
+}
+
+.user-view {
+  text-align: left;
+  background-image: url("/images/iStock-692855500.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.background {
+  background-size: cover;
+}
+
 .App {
   text-align: center;
 }
