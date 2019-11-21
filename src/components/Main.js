@@ -6,6 +6,7 @@ import React, { Component } from "react";
 //==============================
 //       DEPENDENCIES
 //==============================
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 // import axios from "axios";
 
 class Main extends Component {
@@ -22,64 +23,36 @@ class Main extends Component {
 
   render() {
     return (
-      <div>
+      <Router>
         <header>
           <nav>
             <div className="nav-wrapper">
-                <a href="#" className="brand-logo">Logo</a>
-                <ul id="nav-mobile" className="">
-
-                </ul>
-            </div>
-          </nav>
-          <ul id="slide-out" className="sidenav">
-            <li>
-              <div className="user-view"></div>
-              <div className="logo center"></div>
-              <div className="brand-logo"></div>
-              <a href="#name">
-                <span className="white-text name">USER</span>
+              <a href="#" className="brand-logo">
+                Logo
               </a>
-              <a href="#budget">
-                <span>later add total</span>
-              </a>
-            </li>
-            <li>
-              <a>
-                <i className="material-icons">home</i> HOME
-              </a>
-            </li>
-            <li>
-              <ul className="collapsible collapsible-accordian">
+              <ul id="nav-mobile" className="right hide-on-med-and-down">
                 <li>
-                  <a
-                    href="#"
-                    className="collapsible-header waves-effect waves-red"
-                  >
-                    PAY PERIODS
-                  </a>
-                  <div className="collapsible-body">
-                    <ul>
-                      <li>
-                        <a href="/payperiods/new">
-                          <i className="material-icons">create_new_folder</i>NEW
-                          PAY PERIOD
-                        </a>
-                      </li>
-
-                      <li>
-                        <a href="/payperiod">
-                          <i className="material-icons">folder</i>date
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">New Plan</a>
+                </li>
+                <li>
+                  <a href="#">Ticket Prices</a>
+                </li>
+                <li>
+                  <a href="#">Dev Team</a>
                 </li>
               </ul>
-            </li>
-          </ul>
+            </div>
+          </nav>
+          <ul></ul>
         </header>
-      </div>
+        <main>
+          <h1></h1>
+          {/* add here */}
+        </main>
+      </Router>
     );
   }
 }
