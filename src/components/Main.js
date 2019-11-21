@@ -24,19 +24,12 @@ class Main extends Component {
     return (
       <div>
         <header>
-          <nav className="nav">
+          <nav>
             <div className="nav-wrapper">
-              <a href="#" className="brand-logo center">
-                Logo
-              </a>
-              <a
-                href="#"
-                id="menu"
-                data-target="slide-out"
-                className="sidenav-trigger"
-              >
-                <i className="material-icons">menu</i>
-              </a>
+                <a href="#" className="brand-logo">Logo</a>
+                <ul id="nav-mobile" className="">
+
+                </ul>
             </div>
           </nav>
           <ul id="slide-out" className="sidenav">
