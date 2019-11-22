@@ -3,21 +3,14 @@
 //==============================
 import React, { Component } from "react";
 
-class Creators extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: ""
-    };
-  }
-
+class Flights extends Component {
   render() {
     return (
       <div>
-        <h1>creators page</h1>
+        <h1>flights page</h1>
       </div>
     );
   }
 }
 
-export default Creators;
+export default Flights;
