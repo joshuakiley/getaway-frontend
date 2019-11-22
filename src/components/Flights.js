@@ -3,6 +3,7 @@
 //==============================
 import React, { Component } from "react";
 import axios from "axios";
+const baseURL = "http://localhost:3003";
 
 class Flights extends Component {
   constructor(props) {
@@ -10,16 +11,26 @@ class Flights extends Component {
     this.state = {
       flights: []
     };
+    this.getFlights = this.getFlights.bind(this);
   }
 
   componentDidMount() {
-    console.log("Flights Mounted");
+    this.getFlights();
+    console.log("FLIGHTS MOUNTED");
   }
 
   async getFlights() {
-    const response = await axios(
-      "https://api.travelpayouts.com/v2/prices/latest?currency=usd&origin=NYC&destination=BJS&period_type=year&page=1&limit=90&show_to_affiliates=true&sorting=price&trip_class=0&token=b016441b32b41d8ee4e9e3dde7c62fab"
-    );
+    try {
+      const response = await axios.get(`${baseURL}/flights`);
+      console.log("GET FLIGHTS OK");
+      const flights = response.data;
+      this.setState({
+        flights: flights
+      });
+      console.log("setState FLIGHTS OK");
+    } catch (err) {
+      console.log("GET FLIGHTS ERROR: ", err.message);
+    }
   }
 
   render() {
