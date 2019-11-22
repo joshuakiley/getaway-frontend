@@ -43,13 +43,13 @@ class Main extends Component {
                   <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <Link to="/new">New Location</Link>
+                  <Link to="/new"><i class="material-icons">add</i></Link>
                 </li>
                 <li>
                   <Link to="/locations">Locations</Link>
                 </li>
                 <li>
-                  <Link to="/flights">Flights</Link>
+                  <Link to="/flights"><i class="material-icons">airplanemode_active</i></Link>
                 </li>
                 <li>
                   <Link to="/creators">Creators</Link>
