@@ -12,6 +12,16 @@ a {
   position: relative;
 }
 
+.name,
+.email,
+.brand-logo {
+  user-select: none;
+}
+
+.sidenav-trigger {
+  cursor: pointer;
+}
+
 .background {
   background-size: cover;
 }
