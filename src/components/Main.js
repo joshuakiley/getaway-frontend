@@ -7,6 +7,7 @@ import New from "./New.js";
 import Locations from "./Locations.js";
 import Flights from "./Flights.js";
 import Creators from "./Creators.js";
+import Login from "./Login.js"
 
 //==============================
 //       DEPENDENCIES
@@ -30,29 +31,37 @@ class Main extends Component {
     return (
       <Router>
         <header>
-          <nav>
+          <nav className="navbarmain">
             <div className="nav-wrapper">
-              <a href="#" className="brand-logo">
-                Logo
-              </a>
-              <a href="#" data-target="slide-out" className="sidenav-trigger">
+              <div className="brand-logo">Logo</div>
+              <div data-target="slide-out" className="sidenav-trigger">
                 <i className="material-icons">menu</i>
-              </a>
+              </div>
               <ul id="nav-mobile" className="right hide-on-med-and-down">
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link className="waves-effect" to="/">
+                    Home
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/new"><i class="material-icons">add</i></Link>
+                  <Link className="waves-effect" to="/new">
+                    New Location
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/locations">Locations</Link>
+                  <Link className="waves-effect" to="/locations">
+                    My Locations
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/flights"><i class="material-icons">airplanemode_active</i></Link>
+                  <Link className="waves-effect" to="/flights">
+                    Flights
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/creators">Creators</Link>
+                  <Link className="waves-effect" to="/creators">
+                    Creators
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -60,56 +69,60 @@ class Main extends Component {
           <ul id="slide-out" className="sidenav">
             <li>
               <div className="user-view">
-                <a href="#">
-                  <img className="circle" src="/images/download.jpeg" />
-                </a>
+                <div>
+                  <img
+                    className="circle"
+                    src="/images/download.jpeg"
+                    alt="user"
+                  />
+                </div>
 
-                <a href="#">
+                <div>
                   <span className="white-text name">Bulbasaur</span>
-                </a>
+                </div>
 
-                <a href="#">
+                <div>
                   <span className="white-text email">email@email.com</span>
-                </a>
+                </div>
               </div>
             </li>
             <li>
-              <a href="#" className="waves-effect">
+              <Link className="waves-effect" to="/">
                 <i className="material-icons">home</i>Home
-              </a>
+              </Link>
             </li>
             <li>
               <div className="divider"></div>
             </li>
             <li>
-              <Link to="/new">
+              <Link className="waves-effect" to="/new">
                 <i className="material-icons">add</i>New Location
               </Link>
             </li>
             <li>
-              <Link to="/locations">
-                <i className="material-icons">map</i>Locations
+              <Link className="waves-effect" to="/locations">
+                <i className="material-icons">map</i>My Locations
               </Link>
             </li>
             <li>
-              <Link to="/flights">
+              <Link className="waves-effect" to="/flights">
                 <i className="material-icons">airplanemode_active</i>Flights
               </Link>
             </li>
             <li>
-              <Link to="/creators">
+              <Link className="waves-effect" to="/creators">
                 <i className="material-icons">code</i>Creators
               </Link>
             </li>
           </ul>
         </header>
         <main>
-          <h1></h1>
           <Route path="/" exact component={Home} />
           <Route path="/new" exact component={New} />
           <Route path="/locations" exact component={Locations} />
           <Route path="/flights" exact component={Flights} />
           <Route path="/creators" exact component={Creators} />
+
         </main>
       </Router>
     );

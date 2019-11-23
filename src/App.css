@@ -1,7 +1,78 @@
+.creatorbody {
+  background-image: url("/images/clouds.jpg");
+  width: 100vw;
+  height:100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+}
+
+.bodysignin{
+  max-width: auto;
+  padding-left: 35%;
+  padding-right:35%;
+  text-align: center;
+  color:#FFFFFF;
+}
+.bodysignup{
+  max-width: auto;
+  padding-left: 35%;
+  padding-right:35%;
+  text-align: center;
+  color:#FFFFFF;
+}
+.creatorsbody{
+  background-color:#FFFFFF;
+  padding-left: 10%;
+  padding-right:10%;
+  background-image: url("/images/clouds.jpg");
+  width: 100vw;
+  height:130vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.createheader{
+  color:#FFFFFF;
+  font-size: 2em;
+}
 a {
   text-align: left;
 }
+.navbarchange{
+  background-color: black !important;
+  font-family: 'Fugaz One', cursive;
+  color:#FFFFFF;
+  font-size: 6em;
+  height: 15vh;
+  padding-top: 25px;
+}
 
+.loginpage{
+  color:#FFFFFF;
+  text-align:center; 
+  font-size: 1.2em;
+  display:inline-block;
+}
+
+.loginpage:hover{
+  color:#D75B38;
+  text-align:center; 
+  font-size: 1.2em;
+  display:inline-block;
+
+}
+.navbarmain{
+  background-color: black !important;
+  font-family: 'Fugaz One', cursive;
+  color:#FFFFFF;
+  font-size: 1.5em;
+  height: 15vh;
+  padding-top: 15px;
+}
 .user-view {
   text-align: left;
   background-image: url("/images/iStock-692855500.jpg");
@@ -10,6 +81,16 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+
+.name,
+.email,
+.brand-logo {
+  user-select: none;
+}
+
+.sidenav-trigger {
+  cursor: pointer;
 }
 
 .background {
