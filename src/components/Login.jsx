@@ -31,8 +31,8 @@ function Login() {
                 <div className="loginpage"> Register </div>
               </NavLink>
             </div>
-            <Route exact path="/" component={SignUpForm}></Route>
-            <Route path="/sign-in" component={SignInForm}></Route>
+            <Route path="/" exact component={SignInForm}></Route>
+            <Route path="/sign-up" exact component={SignUpForm}></Route>
           </div>
         </div>
       </div>
