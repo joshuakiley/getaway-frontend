@@ -33,11 +33,13 @@ class Main extends Component {
           <nav className="navbarmain">
             <div className="nav-wrapper">
               <div className="brand-logo">
-
-                <img src="../images/logo2.png" width="100" height="90"></img>
+                <img
+                  src="../images/logo2.png"
+                  width="100"
+                  height="90"
+                  alt="Getaway Logo"
+                ></img>
                 {/* GA */}
-
-
               </div>
               <div data-target="slide-out" className="sidenav-trigger">
                 <i className="material-icons">menu</i>

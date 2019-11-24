@@ -13,6 +13,11 @@ class SignUpForm extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  componentDidMount() {
+    console.log("Sign up Form Mounted");
+  }
+
   handleChange(e) {
     let target = e.target;
     let value = target.type === "checkbox" ? target.checked : target.value;
@@ -115,7 +120,7 @@ class SignUpForm extends Component {
               >
                 Sign Up
               </button>
-              <Link to="/sign-in" className="FormField__Link">
+              <Link to="/sign-up" className="FormField__Link">
                 {/* I'm already a member */}
               </Link>
             </div>

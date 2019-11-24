@@ -16,100 +16,184 @@ class Creators extends Component {
       <div className="creatorsbody">
         <br />
         <div className="createheader">
-          <i class="material-icons">keyboard_arrow_left
-</i>
-          Creators <i class="material-icons">keyboard_arrow_right
-</i>
+          <i className="material-icons">keyboard_arrow_left</i>
+          Creators <i className="material-icons">keyboard_arrow_right</i>
         </div>
-        <div class="col s12 m8 offset-m2 l6 offset-l3"></div>
-        <div class="card-panel grey lighten-5 z-depth-1">
-          <div class="row valign-wrapper">
-            <div class="col s2">
+        <div className="col s12 m8 offset-m2 l6 offset-l3"></div>
+        <div className="card-panel grey lighten-5 z-depth-1">
+          <div className="row valign-wrapper">
+            <div className="col s2">
               <img
                 className="circle"
                 src="/images/joshua.jpeg"
                 alt="user"
-                width="150" height="150"
+                width="150"
+                height="150"
               />
             </div>
-            <div class="col s10">
-              <span class="black-text">
-                <p>Joshua: Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br />
-                  <a href="#"><img src="../images/twitter.png" width="30" height="30"></img></a>
-                  <a href="#"><img src="../images/link.png" width="30" height="30"></img></a>
-                  <a href="#"><img src="../images/insta.png" width="30" height="30"></img></a>
+            <div className="col s10">
+              <span className="black-text">
+                <p>
+                  Joshua: Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. It has survived not only five centuries, but
+                  also the leap into electronic typesetting, remaining
+                  essentially unchanged. It was popularised in the 1960s with
+                  the release of Letraset sheets containing Lorem Ipsum
+                  passages, and more recently with desktop publishing software
+                  like Aldus PageMaker including versions of Lorem Ipsum.
+                  <br />
+                  <a href="https://www.twitter.com">
+                    <img
+                      src="../images/twitter.png"
+                      width="30"
+                      height="30"
+                      alt="Twitter Link"
+                    ></img>
+                  </a>
+                  <a href="https://www.linkedin.com">
+                    <img
+                      src="../images/link.png"
+                      width="30"
+                      height="30"
+                      alt="Linkedin Link"
+                    ></img>
+                  </a>
+                  <a href="https://www.instagram.com">
+                    <img
+                      src="../images/insta.png"
+                      width="30"
+                      height="30"
+                      alt="Instagram Link"
+                    ></img>
+                  </a>
                 </p>
               </span>
             </div>
           </div>
         </div>
 
-
-
-
-
-
-        <div class="col s12 m8 offset-m2 l6 offset-l3"></div>
-        <div class="card-panel grey lighten-5 z-depth-1">
-          <div class="row valign-wrapper">
-            <div class="col s2">
+        <div className="col s12 m8 offset-m2 l6 offset-l3"></div>
+        <div className="card-panel grey lighten-5 z-depth-1">
+          <div className="row valign-wrapper">
+            <div className="col s2">
               <img
                 className="circle"
                 src="/images/steven.jpeg"
                 alt="user"
-                width="150" height="150"
+                width="150"
+                height="150"
               />
             </div>
-            <div class="col s10">
-              <span class="black-text">
-                <p>Steven: Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br />
-                  <a href="#"><img src="../images/twitter.png" width="30" height="30"></img></a>
-                  <a href="#"><img src="../images/link.png" width="30" height="30"></img></a>
-                  <a href="#"><img src="../images/facebook.png" width="30" height="30"></img></a>
+            <div className="col s10">
+              <span className="black-text">
+                <p>
+                  Steven: Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. It has survived not only five centuries, but
+                  also the leap into electronic typesetting, remaining
+                  essentially unchanged. It was popularised in the 1960s with
+                  the release of Letraset sheets containing Lorem Ipsum
+                  passages, and more recently with desktop publishing software
+                  like Aldus PageMaker including versions of Lorem Ipsum.
+                  <br />
+                  <a href="https://www.twitter.com">
+                    <img
+                      src="../images/twitter.png"
+                      width="30"
+                      height="30"
+                      alt="Twitter Link"
+                    ></img>
+                  </a>
+                  <a href="https://www.linkedin.com">
+                    <img
+                      src="../images/link.png"
+                      width="30"
+                      height="30"
+                      alt="LinkedIn Link"
+                    ></img>
+                  </a>
+                  <a href="https://www.facebook.com">
+                    <img
+                      src="../images/facebook.png"
+                      width="30"
+                      height="30"
+                      alt="Facebook Link"
+                    ></img>
+                  </a>
                 </p>
               </span>
             </div>
           </div>
         </div>
 
-
-
-
-
-
-        <div class="col s12 m8 offset-m2 l6 offset-l3"></div>
-        <div class="card-panel grey lighten-5 z-depth-1">
-          <div class="row valign-wrapper">
-            <div class="col s2">
+        <div className="col s12 m8 offset-m2 l6 offset-l3"></div>
+        <div className="card-panel grey lighten-5 z-depth-1">
+          <div className="row valign-wrapper">
+            <div className="col s2">
               <img
                 className="circle"
                 src="/images/michele.jpeg"
                 alt="user"
-                width="150" height="150"
+                width="150"
+                height="150"
               />
             </div>
-            <div class="col s10">
-              <span class="black-text">
-                <p>Michele: Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br />
-                  <a href="#"><img src="../images/twitter.png" width="30" height="30"></img></a>
-                  <a href="#"><img src="../images/link.png" width="30" height="30"></img></a>
-                  <a href="#"><img src="../images/facebook.png" width="30" height="30"></img></a>
+            <div className="col s10">
+              <span className="black-text">
+                <p>
+                  Michele: Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. It has survived not only five centuries, but
+                  also the leap into electronic typesetting, remaining
+                  essentially unchanged. It was popularised in the 1960s with
+                  the release of Letraset sheets containing Lorem Ipsum
+                  passages, and more recently with desktop publishing software
+                  like Aldus PageMaker including versions of Lorem Ipsum.
+                  <br />
+                  <a href="https://www.twitter.com">
+                    <img
+                      src="../images/twitter.png"
+                      width="30"
+                      height="30"
+                      alt="Twitter Link"
+                    ></img>
+                  </a>
+                  <a href="https://www.linkedin.com">
+                    <img
+                      src="../images/link.png"
+                      width="30"
+                      height="30"
+                      alt="LinkedIn Link"
+                    ></img>
+                  </a>
+                  <a href="https://www.facebook.com">
+                    <img
+                      src="../images/facebook.png"
+                      width="30"
+                      height="30"
+                      alt="Facebook"
+                    ></img>
+                  </a>
                 </p>
               </span>
             </div>
             <br />
-
           </div>
         </div>
         <br />
         <div className="createheader">
-          <i class="material-icons">keyboard_arrow_left
-</i>
-          /Creators <i class="material-icons">keyboard_arrow_right
-</i><br />
+          <i className="material-icons">keyboard_arrow_left</i>
+          /Creators <i className="material-icons">keyboard_arrow_right</i>
+          <br />
         </div>
       </div>
-
 
       /* 
               <h1>Creators</h1>
@@ -165,8 +249,6 @@ class Creators extends Component {
               </div> */
 
       // </div >
-
-
     );
   }
 }
