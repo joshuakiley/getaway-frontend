@@ -71,10 +71,10 @@ class SignUpForm extends Component {
             </div>
             <div className="FormField">
               <label className="FormField__Label" htmlFor="email">
-                <a className="btn-floating cyan lighten-2">
+                <div className="btn-floating cyan lighten-2">
                   {" "}
                   <i className="material-icons">mail</i>
-                </a>
+                </div>
                 <br />
                 <br />
               </label>
