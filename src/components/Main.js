@@ -7,6 +7,7 @@ import New from "./New.js";
 import Locations from "./Locations.js";
 import Flights from "./Flights.js";
 import Creators from "./Creators.js";
+import Login from "./Login.js"
 
 //==============================
 //       DEPENDENCIES
@@ -30,7 +31,7 @@ class Main extends Component {
     return (
       <Router>
         <header>
-          <nav>
+          <nav className="navbarmain">
             <div className="nav-wrapper">
               <div className="brand-logo">Logo</div>
               <div data-target="slide-out" className="sidenav-trigger">
@@ -121,6 +122,7 @@ class Main extends Component {
           <Route path="/locations" exact component={Locations} />
           <Route path="/flights" exact component={Flights} />
           <Route path="/creators" exact component={Creators} />
+
         </main>
       </Router>
     );
