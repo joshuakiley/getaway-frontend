@@ -1,11 +1,6 @@
 import React from "react";
 
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  NavLink
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import SignUpForm from "./SignUpForm";
 import SignInForm from "./SignInForm";
 
@@ -19,22 +14,22 @@ function Login() {
           </div>
           <div className="App__Form">
             <div className="FormTitle">
-              <NavLink
+              <Link
                 to="/sign-in"
                 className="FormTitle__Link"
                 activeClassName="FormTitle__Link--Active"
               >
                 <div className="loginpage">Login </div>
-              </NavLink>
+              </Link>
               <br />
-              <NavLink
+              <Link
                 exact
                 to="/"
                 className="FormTitle__Link"
                 activeClassName="FormTitle__Link--Active "
               >
                 <div className="loginpage"> Register </div>
-              </NavLink>
+              </Link>
             </div>
             <Route exact path="/" component={SignUpForm}></Route>
             <Route path="/sign-in" component={SignInForm}></Route>
