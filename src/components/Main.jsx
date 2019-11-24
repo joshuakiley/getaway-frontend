@@ -2,12 +2,12 @@
 //       COMPONENTS
 //==============================
 import React, { Component } from "react";
-import Home from "./Home.js";
-import New from "./New.js";
-import Locations from "./Locations.js";
-import Flights from "./Flights.js";
-import Creators from "./Creators.js";
-import Login from "./Login.js"
+import Home from "./Home.jsx";
+import New from "./New.jsx";
+import Locations from "./Locations.jsx";
+import Flights from "./Flights.jsx";
+import Creators from "./Creators.jsx";
+import Login from "./Login.jsx";
 
 //==============================
 //       DEPENDENCIES
@@ -122,7 +122,6 @@ class Main extends Component {
           <Route path="/locations" exact component={Locations} />
           <Route path="/flights" exact component={Flights} />
           <Route path="/creators" exact component={Creators} />
-
         </main>
       </Router>
     );
