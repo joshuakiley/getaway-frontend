@@ -4,3 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const sideInstance = M.Sidenav.init(sidenav);
   const colapseInstance = M.Collapsible.init(colapse);
 });
+
+const closeSideNav = () => {
+  const sidenav = document.querySelectorAll(".sidenav");
+  sidenav.close();
+};
+
+document.querySelectorAll(".sidenavlink").onclick = closeSideNav;
