@@ -3,8 +3,7 @@
 //==============================
 import React, { Component } from "react";
 import Home from "./Home.jsx";
-import New from "./New.jsx";
-import Locations from "./Locations.jsx";
+// import NewForm from "./NewForm.jsx";
 import Flights from "./Flights.jsx";
 import Creators from "./Creators.jsx";
 
@@ -12,6 +11,17 @@ import Creators from "./Creators.jsx";
 //       DEPENDENCIES
 //==============================
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+let baseURL = "";
+
+if (process.env.NODE_ENV === "development") {
+  baseURL = "http://localhost:3003";
+} else {
+  baseURL = "your heroku bakend url here";
+}
+
+// baseURL = 'https://fathomless-sierra-68956.herokuapp.com'
+console.log("current base URL:", baseURL);
 // import axios from "axios";
 
 class Main extends Component {
@@ -30,18 +40,20 @@ class Main extends Component {
     return (
       <Router>
         <header>
-          <nav className="navbarmain">
+          <nav className="nav">
             <div className="nav-wrapper">
               <div className="brand-logo">
                 <img
+                  className="brand-logo-img"
                   src="../images/logo2.png"
-                  width="100"
-                  height="90"
                   alt="Getaway Logo"
                 ></img>
                 {/* GA */}
               </div>
-              <div data-target="slide-out" className="sidenav-trigger">
+              <div
+                data-target="slide-out"
+                className="sidenav-trigger hide-on-large-only"
+              >
                 <i className="material-icons">menu</i>
               </div>
               <ul id="nav-mobile" className="right hide-on-med-and-down">
@@ -50,16 +62,16 @@ class Main extends Component {
                     Home
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link className="waves-effect" to="/new">
                     New Location
                   </Link>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <Link className="waves-effect" to="/locations">
                     My Locations
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link className="waves-effect" to="/flights">
                     Flights
@@ -123,10 +135,11 @@ class Main extends Component {
             </li>
           </ul>
         </header>
+
         <main>
           <Route path="/" exact component={Home} />
-          <Route path="/new" exact component={New} />
-          <Route path="/locations" exact component={Locations} />
+          {/* <Route path="/new" exact component={New} />
+          <Route path="/locations" exact component={Locations} /> */}
           <Route path="/flights" exact component={Flights} />
           <Route path="/creators" exact component={Creators} />
         </main>
