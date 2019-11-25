@@ -13,6 +13,10 @@ label {
   padding: 13px 10px 0 0;
 }
 
+.brand-logo {
+  margin: auto !important;
+}
+
 .nav-button {
   width: 100px;
   text-align: center;

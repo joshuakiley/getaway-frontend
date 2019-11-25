@@ -2,16 +2,38 @@
 //       COMPONENTS
 //==============================
 import React, { Component } from "react";
+<<<<<<< HEAD:src/components/Main.jsx
 import Home from "./Home.jsx";
 import New from "./New.jsx";
 import Locations from "./Locations.jsx";
 import Flights from "./Flights.jsx";
 import Creators from "./Creators.jsx";
+=======
+import Home from "./Home.js";
+import New from "./New.js";
+import Locations from "./Locations.js";
+import Flights from "./Flights.js";
+import Creators from "./Creators.js";
+import axios from "axios";
+
+import Login from "./Login.js";
+>>>>>>> 1b7670b44a5c3ee7669bfe05a963cc32d8ca5eff:src/components/Main.js
 
 //==============================
 //       DEPENDENCIES
 //==============================
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+let baseURL = "";
+
+if (process.env.NODE_ENV === "development") {
+  baseURL = "http://localhost:3003";
+} else {
+  baseURL = "your heroku bakend url here";
+}
+
+// baseURL = 'https://fathomless-sierra-68956.herokuapp.com'
+console.log("current base URL:", baseURL);
 // import axios from "axios";
 
 class Main extends Component {
@@ -123,6 +145,7 @@ class Main extends Component {
             </li>
           </ul>
         </header>
+
         <main>
           <Route path="/" exact component={Home} />
           <Route path="/new" exact component={New} />
