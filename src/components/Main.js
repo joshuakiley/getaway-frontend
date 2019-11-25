@@ -7,11 +7,9 @@ import New from "./New.js";
 import Locations from "./Locations.js";
 import Flights from "./Flights.js";
 import Creators from "./Creators.js";
-<<<<<<< HEAD
 import axios from "axios";
-=======
-import Login from "./Login.js"
->>>>>>> fa8153d6bd0549c63390e269b2cf25b15d88c8e6
+
+import Login from "./Login.js";
 
 //==============================
 //       DEPENDENCIES
@@ -138,7 +136,6 @@ class Main extends Component {
           <Route path="/locations" exact component={Locations} />
           <Route path="/flights" exact component={Flights} />
           <Route path="/creators" exact component={Creators} />
-
         </main>
       </Router>
     );

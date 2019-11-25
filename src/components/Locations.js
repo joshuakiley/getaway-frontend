@@ -54,6 +54,12 @@ class Locations extends Component {
             {this.state.location.map(location => {
               return (
                 <tr key={location._id}>
+                  <td> {location.url}</td>
+                  <td> {location.user}</td>
+                  <td> {location.notes}</td>
+                  <td> {location.activities}</td>
+                  <td> {location.budget}</td>
+                  <td> {location.month}</td>
                   <td> {location.restaurant}</td>
 
                   <td> {location.img}</td>
