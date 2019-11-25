@@ -1,79 +1,96 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+const baseURL = "http://localhost:3003";
 
 class SignUpForm extends Component {
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.state = {
-            name: "",
-            email: "",
-            password: "",
-        };
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-    handleChange(e) {
-        let target = e.target;
-        let value = target.type === "checkbox" ? target.checked : target.value;
-        let name = target.name;
+    this.state = {
+      name: "",
+      email: "",
+      password: ""
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
-        this.setState({ [name]: value });
-    }
-    handleSubmit(e) {
-        e.preventDefault();
-        console.log("the form was submitted with the following data:");
-        console.log(this.state);
-    }
-    render() {
-        return (
-            <div className="bodysignup">
-                <div className="FormCenter">
-                    <form onSubmit={this.handleSubmit} className="FormFields">
-                        <div className="FormField">
-                            <label className="FormField__Label" htmlFor="name">
-                                <br />
-                                <a class="btn-floating cyan lighten-2" >     <i class="material-icons">face</i></a><br /><br />
-                            </label>
-                            <input
-                                type="text"
-                                id="name"
-                                className="FormField__Input"
-                                placeholder="Enter Name"
-                                name="name"
-                                value={this.state.name}
-                                onChange={this.handleChange}
-                            ></input>
-                        </div>
-                        <div className="FormField">
-                            <label className="FormField__Label" htmlFor="password">
-                                <a class="btn-floating cyan lighten-2" >        <i class="material-icons">https</i></a><br /><br />
-                            </label>
-                            <input
-                                type="password"
-                                id="password"
-                                className="FormField__Input"
-                                placeholder="Create Password"
-                                name="password"
-                                value={this.state.password}
-                                onChange={this.handleChange}
-                            ></input>
-                        </div>
-                        <div className="FormField">
-                            <label className="FormField__Label" htmlFor="email">
-                                <a class="btn-floating cyan lighten-2" >   <i class="material-icons">mail</i></a><br /><br />
-                            </label>
-                            <input
-                                type="email"
-                                id="email"
-                                className="FormField__Input"
-                                placeholder="Enter Email"
-                                name="email"
-                                value={this.state.email}
-                                onChange={this.handleChange}
-                            ></input>
-                        </div>
-                        {/* <div className="FormField">
+  componentDidMount() {
+    console.log("Sign up Form Mounted");
+  }
+
+  handleChange(e) {
+    let target = e.target;
+    let value = target.type === "checkbox" ? target.checked : target.value;
+    let name = target.name;
+
+    this.setState({ [name]: value });
+  }
+
+  async handleSubmit(e) {
+    e.preventDefault();
+    const response = await axios.post(`${baseURL}/users`, {
+      name: this.state.name,
+      email: this.state.email,
+      password: this.state.password
+    });
+  }
+
+  render() {
+    return (
+      <div className="login-body">
+        <form className="form" onSubmit={this.handleSubmit}>
+          <div className="form-element">
+            <label htmlFor="name">
+              <i className="material-icons">face</i>
+            </label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter Name"
+              name="name"
+              value={this.state.name}
+              className="form-input"
+              onChange={this.handleChange}
+              autoComplete="off"
+            ></input>
+          </div>
+
+          <div className="form-element">
+            <label htmlFor="password">
+              <i className="material-icons">https</i>
+            </label>
+
+            <input
+              type="password"
+              id="password"
+              placeholder="Create Password"
+              name="password"
+              className="form-input"
+              value={this.state.password}
+              onChange={this.handleChange}
+              autoComplete="off"
+            ></input>
+          </div>
+
+          <div className="form-element">
+            <label htmlFor="email">
+              <i className="material-icons">mail</i>
+            </label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter Email"
+              name="email"
+              className="form-input"
+              value={this.state.email}
+              onChange={this.handleChange}
+              autoComplete="off"
+            ></input>
+          </div>
+
+          {/* <div className="FormField">
                         <label className="FormField__CheckboxLabel">
                             <input
                                 className="FormField__Checkbox"
@@ -93,22 +110,18 @@ class SignUpForm extends Component {
                         </label>
                     </div> */}
 
-                        <div className="FormField">
-                            <button
-                                className="FormField__Button mr-20"
-                                onChange={this.handleSubmit}
-                            >
-                                Sign Up
-                            </button>
-                            <Link to="/sign-in" classname="FormField__Link">
-                                {/* I'm already a member */}
-                            </Link>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        );
-    }
+          <div>
+            <button className="btn waves-effect blue darken-2" type="submit">
+              Sign Up
+            </button>
+            {/* <Link to="/sign-up" className="FormField__Link">
+              I'm already a member
+            </Link> */}
+          </div>
+        </form>
+      </div>
+    );
+  }
 }
 
 export default SignUpForm;
