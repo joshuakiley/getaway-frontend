@@ -2,21 +2,23 @@
 //       COMPONENTS
 //==============================
 import React from "react";
-import Main from "./components/Main.js";
-import Login from "./components/Login.js"
+import Main from "./components/Main.jsx";
+import Login from "./components/Login.jsx";
 //==============================
 //       DEPENDENCIES
 //==============================
 import "./App.css";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      session: false
+    };
+  }
   render() {
     return (
-      <div className="App">
-
-        <Login />
-        <Main />
-      </div>
+      <div className="App">{this.state.session ? <Main /> : <Login />}</div>
     );
   }
 }

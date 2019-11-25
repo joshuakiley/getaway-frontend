@@ -2,12 +2,11 @@
 //       COMPONENTS
 //==============================
 import React, { Component } from "react";
-import Home from "./Home.js";
-import New from "./New.js";
-import Locations from "./Locations.js";
-import Flights from "./Flights.js";
-import Creators from "./Creators.js";
-import Login from "./Login.js"
+import Home from "./Home.jsx";
+import New from "./New.jsx";
+import Locations from "./Locations.jsx";
+import Flights from "./Flights.jsx";
+import Creators from "./Creators.jsx";
 
 //==============================
 //       DEPENDENCIES
@@ -33,7 +32,15 @@ class Main extends Component {
         <header>
           <nav className="navbarmain">
             <div className="nav-wrapper">
-              <div className="brand-logo">Logo</div>
+              <div className="brand-logo">
+                <img
+                  src="../images/logo2.png"
+                  width="100"
+                  height="90"
+                  alt="Getaway Logo"
+                ></img>
+                {/* GA */}
+              </div>
               <div data-target="slide-out" className="sidenav-trigger">
                 <i className="material-icons">menu</i>
               </div>
@@ -122,7 +129,6 @@ class Main extends Component {
           <Route path="/locations" exact component={Locations} />
           <Route path="/flights" exact component={Flights} />
           <Route path="/creators" exact component={Creators} />
-
         </main>
       </Router>
     );
