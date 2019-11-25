@@ -174,3 +174,11 @@ margin-right:20%;
 .App {
   text-align: center;
 }
+
+button {
+  background: #d75b38;
+}
+
+.newlocationbutton {
+  background: rgb(221, 215, 31);
+}

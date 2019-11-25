@@ -1,16 +1,16 @@
-import React, { Component } from 'react'
-import axios from 'axios';
-import NewForm from './NewForm.jsx'
-import Show from './Show.jsx'
+import React, { Component } from "react";
+import axios from "axios";
+import NewForm from "./NewForm.jsx";
+import Show from "./Show.jsx";
 
-let baseURL = process.env.REACT_APP_BASEURL
+let baseURL = process.env.REACT_APP_BASEURL;
 
-if (process.env.NODE_ENV === 'development') {
-    baseURL = 'http://localhost:3003'
+if (process.env.NODE_ENV === "development") {
+    baseURL = "http://localhost:3003";
 } else {
-    baseURL = 'https://fathomless-sierra-68956.herokuapp.com'//we need to change this once deployed 
+    baseURL = "https://fathomless-sierra-68956.herokuapp.com"; //we need to change this once deployed
 }
-console.log(baseURL)
+console.log(baseURL);
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -54,34 +54,35 @@ class Home extends Component {
         this.getLocation();
     }
 
-
     render() {
-
-        console.log(this.state.location)
+        console.log(this.state.location);
         return (
-
             <div>
-                <br></br>
 
-                <div className='NewForm'>
+                <div>
+                    <br></br>
 
-                    <NewForm handleAddLocation={this.handleAddLocation} baseURL={baseURL} />
+                    <div className='NewForm'>
+
+                        <NewForm handleAddLocation={this.handleAddLocation} baseURL={baseURL} />
+                    </div>
+                    <br></br>
+                    <div className="row">
+                        <Show baseURL={baseURL}
+                            location={this.state.location}
+                            month={this.state.month}
+                            notes={this.state.notes}
+                            budget={this.state.budget}
+                            sights={this.state.sights}
+                            img={this.state.img}
+                            getLocation={this.getLocation}
+
+
+                        />
+                    </div>
+                    <br />
+                    <br />
                 </div>
-                <br></br>
-                <div className="row">
-                    <Show baseURL={baseURL}
-                        location={this.state.location}
-                        month={this.state.month}
-                        notes={this.state.notes}
-                        budget={this.state.budget}
-                        sights={this.state.sights}
-                        img={this.state.img}
-
-
-                    />
-                </div>
-                <br />
-                <br />
             </div>
         );
     }

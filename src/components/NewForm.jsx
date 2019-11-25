@@ -4,7 +4,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-
 class NewForm extends Component {
   constructor(props) {
     super(props);
@@ -23,21 +22,19 @@ class NewForm extends Component {
   handleChange(event) {
     this.setState({
       [event.currentTarget.id]: event.currentTarget.value
-    })
+    });
   }
 
   async handleSubmit(event) {
     event.preventDefault();
-    const response = await axios.post(`${this.props.baseURL}/locations`,
-      {
-
-        location: this.state.location,
-        img: this.state.img,
-        month: this.state.month,
-        notes: this.state.notes,
-        budget: this.state.budget,
-        sights: this.state.sights,
-      });
+    const response = await axios.post(`${this.props.baseURL}/locations`, {
+      location: this.state.location,
+      img: this.state.img,
+      month: this.state.month,
+      notes: this.state.notes,
+      budget: this.state.budget,
+      sights: this.state.sights
+    });
 
     this.setState({
       location: "",
@@ -47,7 +44,7 @@ class NewForm extends Component {
       budget: "",
       notes: ""
     });
-    console.log("location", response.data)
+    console.log("location", response.data);
     this.props.handleAddLocation(response.data);
   }
 
