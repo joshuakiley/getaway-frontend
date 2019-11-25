@@ -2,22 +2,11 @@
 //       COMPONENTS
 //==============================
 import React, { Component } from "react";
-<<<<<<< HEAD:src/components/Main.jsx
 import Home from "./Home.jsx";
 import New from "./New.jsx";
 import Locations from "./Locations.jsx";
 import Flights from "./Flights.jsx";
 import Creators from "./Creators.jsx";
-=======
-import Home from "./Home.js";
-import New from "./New.js";
-import Locations from "./Locations.js";
-import Flights from "./Flights.js";
-import Creators from "./Creators.js";
-import axios from "axios";
-
-import Login from "./Login.js";
->>>>>>> 1b7670b44a5c3ee7669bfe05a963cc32d8ca5eff:src/components/Main.js
 
 //==============================
 //       DEPENDENCIES

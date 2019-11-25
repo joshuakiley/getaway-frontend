@@ -3,7 +3,7 @@
 //==============================
 import React, { Component } from "react";
 import axios from "axios";
-import New from "./New.js";
+import New from "./New.jsx";
 
 let baseURL = "";
 
