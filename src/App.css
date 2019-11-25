@@ -17,6 +17,10 @@ label {
   margin: auto !important;
 }
 
+.brand-logo-img {
+  width: 70px;
+}
+
 .nav-button {
   width: 100px;
   text-align: center;

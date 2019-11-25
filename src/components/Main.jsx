@@ -41,13 +41,12 @@ class Main extends Component {
     return (
       <Router>
         <header>
-          <nav className="navbarmain">
+          <nav className="nav">
             <div className="nav-wrapper">
               <div className="brand-logo">
                 <img
+                  className="brand-logo-img"
                   src="../images/logo2.png"
-                  width="100"
-                  height="90"
                   alt="Getaway Logo"
                 ></img>
                 {/* GA */}
