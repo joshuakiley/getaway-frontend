@@ -43,12 +43,12 @@ class Main extends Component {
           <nav className="nav">
             <div className="nav-wrapper">
               <div className="brand-logo">
-                <img
+                {/* <img
                   className="brand-logo-img"
                   src="../images/logo2.png"
                   alt="Getaway Logo"
-                ></img>
-                {/* GA */}
+                ></img> */}
+                GA
               </div>
               <div
                 data-target="slide-out"
