@@ -3,8 +3,7 @@
 //==============================
 import React, { Component } from "react";
 import Home from "./Home.jsx";
-import New from "./New.jsx";
-import Locations from "./Locations.jsx";
+// import NewForm from "./NewForm.jsx";
 import Flights from "./Flights.jsx";
 import Creators from "./Creators.jsx";
 
@@ -60,16 +59,16 @@ class Main extends Component {
                     Home
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link className="waves-effect" to="/new">
                     New Location
                   </Link>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <Link className="waves-effect" to="/locations">
                     My Locations
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link className="waves-effect" to="/flights">
                     Flights
@@ -136,8 +135,8 @@ class Main extends Component {
 
         <main>
           <Route path="/" exact component={Home} />
-          <Route path="/new" exact component={New} />
-          <Route path="/locations" exact component={Locations} />
+          {/* <Route path="/new" exact component={New} />
+          <Route path="/locations" exact component={Locations} /> */}
           <Route path="/flights" exact component={Flights} />
           <Route path="/creators" exact component={Creators} />
         </main>

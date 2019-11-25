@@ -4,96 +4,58 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-let baseURL = "";
 
-if (process.env.NODE_ENV === "development") {
-  baseURL = "http://localhost:3003";
-} else {
-  baseURL = "your heroku bakend url here";
-}
-
-// baseURL = 'https://fathomless-sierra-68956.herokuapp.com'
-console.log("current base URL:", baseURL);
-class New extends Component {
+class NewForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
       location: "",
-      restaurant: "",
       month: "",
       notes: "",
-      activities: "",
       budget: "",
-      url: "",
       sights: "",
-      user: "",
-
       img: ""
     };
-    this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(event) {
-    const { name, value } = event.target;
     this.setState({
-      [name]: value
-    });
+      [event.currentTarget.id]: event.currentTarget.value
+    })
   }
 
   async handleSubmit(event) {
     event.preventDefault();
-    const baseURL = this.props.baseURL;
-    const response = await axios.post(`${baseURL}/location`, {
-      restaurant: this.state.restaurant,
-      location: this.state.location,
-      img: this.state.img,
-      month: this.state.month,
-      notes: this.state.notes,
-      activities: this.state.activities,
-      budget: this.state.budget,
-      sights: this.state.sights,
-      user: this.state.user,
-      url: this.state.url
-    });
+    const response = await axios.post(`${this.props.baseURL}/locations`,
+      {
+
+        location: this.state.location,
+        img: this.state.img,
+        month: this.state.month,
+        notes: this.state.notes,
+        budget: this.state.budget,
+        sights: this.state.sights,
+      });
+
     this.setState({
-      restaurant: "",
       location: "",
       img: "",
       month: "",
-      url: "",
-      user: "",
       sights: "",
       budget: "",
-      activities: "",
       notes: ""
     });
-    this.props.handleAddlocation(response.data);
+    console.log("location", response.data)
+    this.props.handleAddLocation(response.data);
   }
 
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label htmlFor="user"></label>
-
-        <input
-          type="text"
-          id="user"
-          name="user"
-          onChange={this.handleChange}
-          value={this.state.user}
-          placeholder="user"
-        />
         <label htmlFor="restaurant"></label>
 
-        <input
-          type="text"
-          id="restaurant"
-          name="restaurant"
-          onChange={this.handleChange}
-          value={this.state.restaurant}
-          placeholder="restaurant"
-        />
         <label htmlFor="img"></label>
         <input
           type="text"
@@ -112,15 +74,7 @@ class New extends Component {
           value={this.state.month}
           placeholder="month"
         />
-        <label htmlFor="activities"></label>
-        <input
-          type="text"
-          id="activities"
-          name="activities"
-          onChange={this.handleChange}
-          value={this.state.activities}
-          placeholder="activities"
-        />
+
         <label htmlFor="sights"></label>
         <input
           type="text"
@@ -130,15 +84,7 @@ class New extends Component {
           value={this.state.sights}
           placeholder="sights"
         />
-        <label htmlFor="url"></label>
-        <input
-          type="text"
-          id="url"
-          name="url"
-          onChange={this.handleChange}
-          value={this.state.url}
-          placeholder="url"
-        />
+
         <label htmlFor="budget"></label>
         <input
           type="Number"
@@ -167,10 +113,10 @@ class New extends Component {
           value={this.state.location}
           placeholder="location"
         />
-        <input type="submit" value="Add a Location" />
+        <input type="submit" value="Add a Location" className="newlocationbutton" />
       </form>
     );
   }
 }
 
-export default New;
+export default NewForm;
