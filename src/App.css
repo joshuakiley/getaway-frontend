@@ -1,74 +1,66 @@
 .creatorbody {
   background-image: url("/images/clouds.jpg");
   width: 100vw;
-  height:100vh;
+  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-
 }
 
-.bodysignin{
+.login-body {
   max-width: auto;
   padding-left: 35%;
-  padding-right:35%;
+  padding-right: 35%;
   text-align: center;
-  color:#FFFFFF;
+  color: #ffffff;
 }
-.bodysignup{
-  max-width: auto;
-  padding-left: 35%;
-  padding-right:35%;
-  text-align: center;
-  color:#FFFFFF;
-}
-.creatorsbody{
-  background-color:#FFFFFF;
+
+.creatorsbody {
+  background-color: #ffffff;
   padding-left: 10%;
-  padding-right:10%;
+  padding-right: 10%;
   background-image: url("/images/clouds.jpg");
   width: 100vw;
-  height:140vh;
+  height: 140vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
-.createheader{
-  color:#FFFFFF;
+.createheader {
+  color: #ffffff;
   font-size: 2em;
 }
 a {
   text-align: left;
 }
-.navbarchange{
+.navbarchange {
   background-color: black !important;
-  font-family: 'Fugaz One', cursive;
-  color:#FFFFFF;
+  font-family: "Fugaz One", cursive;
+  color: #ffffff;
   font-size: 6em;
   height: 15vh;
   padding-top: 25px;
 }
 
-.loginpage{
-  color:#FFFFFF;
-  text-align:center; 
+.loginpage {
+  color: #ffffff;
+  text-align: center;
   font-size: 1.2em;
-  display:inline-block;
+  display: inline-block;
 }
 
-.loginpage:hover{
-  color:#D75B38;
-  text-align:center; 
+.loginpage:hover {
+  color: #d75b38;
+  text-align: center;
   font-size: 1.2em;
-  display:inline-block;
-
+  display: inline-block;
 }
-.navbarmain{
+.navbarmain {
   background-color: #000000 !important;
-  font-family: 'Fugaz One', cursive;
-  color:#FFFFFF;
+  font-family: "Fugaz One", cursive;
+  color: #ffffff;
   font-size: 1.5em;
   height: 15vh;
   padding-top: 15px;
@@ -87,7 +79,6 @@ a {
 .email,
 .brand-logo {
   user-select: none;
-
 }
 
 .sidenav-trigger {
