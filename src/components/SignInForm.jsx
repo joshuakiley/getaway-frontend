@@ -33,30 +33,38 @@ class SignInForm extends Component {
   render() {
     return (
       <div className="login-body">
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="email">E-Mail Address</label>
-          <input
-            type="email"
-            id="email"
-            className="FormField__Input"
-            placeholder="Enter your email"
-            name="email"
-            value={this.state.email}
-            onChange={this.handleChange}
-          ></input>
+        <form className="form" onSubmit={this.handleSubmit}>
+          <div className="form-element">
+            <label htmlFor="email">
+              <i className="material-icons">mail</i>
+            </label>
+            <input
+              type="email"
+              id="email"
+              className="form-input"
+              placeholder="Enter your email"
+              name="email"
+              value={this.state.email}
+              onChange={this.handleChange}
+            ></input>
+          </div>
 
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            className="FormField__Input"
-            placeholder="Enter your password"
-            name="password"
-            value={this.state.password}
-            onChange={this.handleChange}
-          ></input>
+          <div className="form-element">
+            <label htmlFor="password">
+              <i className="material-icons">https</i>
+            </label>
+            <input
+              type="password"
+              id="password"
+              className="form-input"
+              placeholder="Enter your password"
+              name="password"
+              value={this.state.password}
+              onChange={this.handleChange}
+            ></input>
+          </div>
 
-          <button className="btn blue lighten-2 waves-effect" type="submit">
+          <button className="btn blue darken-2 waves-effect" type="submit">
             Sign In
           </button>
           {/* <Link to="/" className="FormField__Link">

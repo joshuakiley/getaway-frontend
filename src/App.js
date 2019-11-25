@@ -10,12 +10,15 @@ import Login from "./components/Login.jsx";
 import "./App.css";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      session: false
+    };
+  }
   render() {
     return (
-      <div className="App">
-        <Login />
-        <Main />
-      </div>
+      <div className="App">{this.state.session ? <Main /> : <Login />}</div>
     );
   }
 }

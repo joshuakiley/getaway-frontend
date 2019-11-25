@@ -40,29 +40,25 @@ class SignUpForm extends Component {
   render() {
     return (
       <div className="login-body">
-        <form onSubmit={this.handleSubmit}>
-          <div>
+        <form className="form" onSubmit={this.handleSubmit}>
+          <div className="form-element">
             <label htmlFor="name">
-              <div className="btn-floating btn-large cyan lighten-2">
-                <i className="material-icons">face</i>
-              </div>
+              <i className="material-icons">face</i>
             </label>
-
             <input
               type="text"
               id="name"
               placeholder="Enter Name"
               name="name"
               value={this.state.name}
+              className="form-input"
               onChange={this.handleChange}
             ></input>
           </div>
 
-          <div>
+          <div className="form-element">
             <label htmlFor="password">
-              <div className="btn-floating btn-large cyan lighten-2">
-                <i className="material-icons">https</i>
-              </div>
+              <i className="material-icons">https</i>
             </label>
 
             <input
@@ -70,22 +66,22 @@ class SignUpForm extends Component {
               id="password"
               placeholder="Create Password"
               name="password"
+              className="form-input"
               value={this.state.password}
               onChange={this.handleChange}
             ></input>
           </div>
 
-          <div>
+          <div className="form-element">
             <label htmlFor="email">
-              <div className="btn-floating btn-large cyan lighten-2">
-                <i className="material-icons">mail</i>
-              </div>
+              <i className="material-icons">mail</i>
             </label>
             <input
               type="email"
               id="email"
               placeholder="Enter Email"
               name="email"
+              className="form-input"
               value={this.state.email}
               onChange={this.handleChange}
             ></input>
@@ -112,7 +108,7 @@ class SignUpForm extends Component {
                     </div> */}
 
           <div>
-            <button className="btn waves-effect blue lighten-2" type="submit">
+            <button className="btn waves-effect blue darken-2" type="submit">
               Sign Up
             </button>
             {/* <Link to="/sign-up" className="FormField__Link">

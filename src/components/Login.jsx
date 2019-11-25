@@ -8,35 +8,71 @@ class Login extends Component {
   render() {
     return (
       <Router>
-        <div className="creatorbody">
-          <div className="App">
-            <div className="App__Aside" refs="stars">
-              <nav className="navbarchange">GetAway</nav>
-            </div>
-            <div className="App__Form">
-              <div className="FormTitle">
-                <NavLink
-                  to="/"
-                  className="FormTitle__Link"
-                  activeClassName="FormTitle__Link--Active"
-                >
-                  <div className="loginpage">Login</div>
-                </NavLink>
-                <br />
-                <NavLink
-                  exact
-                  to="/sign-up"
-                  className="FormTitle__Link"
-                  activeClassName="FormTitle__Link--Active "
-                >
-                  <div className="loginpage">Register</div>
-                </NavLink>
+        <header>
+          <nav className="blue darken-4">
+            <div className="nav-wrapper">
+              <div className="brand-logo">
+                GetAway
+                {/* GA */}
               </div>
-              <Route path="/" exact component={SignInForm}></Route>
-              <Route path="/sign-up" exact component={SignUpForm}></Route>
+              <div
+                data-target="slide-out"
+                className="sidenav-trigger hide-on-large-only"
+              >
+                <i className="material-icons">menu</i>
+              </div>
+              <ul id="nav-mobile" className="right hide-on-med-and-down">
+                <li>
+                  <NavLink className="waves-effect" to="/">
+                    Login
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="waves-effect" exact to="/sign-up">
+                    Register
+                  </NavLink>
+                </li>
+              </ul>
             </div>
+          </nav>
+          <ul id="slide-out" className="sidenav">
+            <li>
+              <div className="user-view">
+                <div>
+                  <img
+                    className="circle"
+                    src="/images/download.jpeg"
+                    alt="user"
+                  />
+                </div>
+
+                <div>
+                  <span className="white-text name">Bulbasaur</span>
+                </div>
+
+                <div>
+                  <span className="white-text email">email@email.com</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <NavLink className="waves-effect" to="/">
+                <i className="material-icons">send</i>Login
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className="waves-effect" exact to="/sign-up">
+                <i className="material-icons">content_paste</i>Register
+              </NavLink>
+            </li>
+          </ul>
+        </header>
+        <main>
+          <div className="creatorbody">
+            <Route path="/" exact component={SignInForm}></Route>
+            <Route path="/sign-up" exact component={SignUpForm}></Route>
           </div>
-        </div>
+        </main>
       </Router>
     );
   }
