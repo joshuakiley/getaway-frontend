@@ -1,6 +1,6 @@
 body {
   height: 100vh;
-  background-image: url("/images/test-dark.jpg");
+  background-image: url("/images/iStock-1053244036.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11,6 +11,22 @@ label {
   user-select: none;
   color: #ffffff;
   padding: 13px 10px 0 0;
+}
+
+.row {
+  margin: 20px;
+}
+
+.card {
+  border-radius: 25px;
+  text-align: left;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.card-action {
+  border-bottom-right-radius: 25px !important;
+  border-bottom-left-radius: 25px !important;
 }
 
 .brand-logo {
@@ -102,7 +118,7 @@ a {
 }
 .user-view {
   text-align: left;
-  background-image: url("/images/test-dark.jpg");
+  background-image: url("/images/iStock-1053244036.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;

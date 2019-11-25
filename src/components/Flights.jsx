@@ -2,6 +2,7 @@
 //       COMPONENTS
 //==============================
 import React, { Component } from "react";
+import Card from "./Card.jsx";
 import axios from "axios";
 const baseURL = "http://localhost:3003";
 
@@ -36,7 +37,19 @@ class Flights extends Component {
   render() {
     return (
       <div>
-        <h1>flights page</h1>
+        <div className="row">
+          {this.state.flights.map(flight => {
+            return (
+              <Card
+                origin={flight.origin}
+                depart_date={flight.depart_date}
+                destination={flight.destination}
+                return_date={flight.return_date}
+                value={flight.value}
+              />
+            );
+          })}
+        </div>
       </div>
     );
   }

@@ -51,7 +51,10 @@ class Main extends Component {
                 ></img>
                 {/* GA */}
               </div>
-              <div data-target="slide-out" className="sidenav-trigger">
+              <div
+                data-target="slide-out"
+                className="sidenav-trigger hide-on-large-only"
+              >
                 <i className="material-icons">menu</i>
               </div>
               <ul id="nav-mobile" className="right hide-on-med-and-down">
