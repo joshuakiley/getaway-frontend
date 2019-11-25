@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import axios from "axios";
-const baseURL = "http://localhost:3003";
+// import { Link } from "react-router-dom";
+// import axios from "axios";
+// const baseURL = "http://localhost:3003";
 
 class SignUpForm extends Component {
   constructor() {
@@ -13,7 +13,7 @@ class SignUpForm extends Component {
       password: ""
     };
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
@@ -28,14 +28,14 @@ class SignUpForm extends Component {
     this.setState({ [name]: value });
   }
 
-  async handleSubmit(e) {
-    e.preventDefault();
-    const response = await axios.post(`${baseURL}/users`, {
-      name: this.state.name,
-      email: this.state.email,
-      password: this.state.password
-    });
-  }
+  // async handleSubmit(e) {
+  //   e.preventDefault();
+  //   const response = await axios.post(`${baseURL}/users`, {
+  //     name: this.state.name,
+  //     email: this.state.email,
+  //     password: this.state.password
+  //   });
+  // }
 
   render() {
     return (

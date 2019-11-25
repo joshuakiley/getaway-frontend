@@ -49,26 +49,26 @@ class Locations extends Component {
     return (
       <div className="container">
         <h1>location</h1>
-        <table>
-          <tbody>
+        <div>
+          <div>
             {this.state.location.map(location => {
               return (
-                <tr key={location._id}>
-                  <td> {location.url}</td>
-                  <td> {location.user}</td>
-                  <td> {location.notes}</td>
-                  <td> {location.activities}</td>
-                  <td> {location.budget}</td>
-                  <td> {location.month}</td>
-                  <td> {location.restaurant}</td>
+                <div key={location._id}>
+                  <div> {location.url}</div>
+                  <div> {location.user}</div>
+                  <div> {location.notes}</div>
+                  <div> {location.activities}</div>
+                  <div> {location.budget}</div>
+                  <div> {location.month}</div>
+                  <div> {location.restaurant}</div>
 
-                  <td> {location.img}</td>
-                </tr>
+                  <div> {location.img}</div>
+                </div>
               );
             })}
-          </tbody>
+          </div>
           <New handleAddlocation={this.handleAddlocation} baseURL={baseURL} />
-        </table>
+        </div>
       </div>
     );
   }
