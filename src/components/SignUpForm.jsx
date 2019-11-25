@@ -53,6 +53,7 @@ class SignUpForm extends Component {
               value={this.state.name}
               className="form-input"
               onChange={this.handleChange}
+              autoComplete="off"
             ></input>
           </div>
 
@@ -69,6 +70,7 @@ class SignUpForm extends Component {
               className="form-input"
               value={this.state.password}
               onChange={this.handleChange}
+              autoComplete="off"
             ></input>
           </div>
 
@@ -84,6 +86,7 @@ class SignUpForm extends Component {
               className="form-input"
               value={this.state.email}
               onChange={this.handleChange}
+              autoComplete="off"
             ></input>
           </div>
 

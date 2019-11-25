@@ -9,7 +9,7 @@ class Login extends Component {
     return (
       <Router>
         <header>
-          <nav className="blue darken-4">
+          <nav className="nav">
             <div className="nav-wrapper">
               <div className="brand-logo">
                 GetAway
@@ -23,12 +23,16 @@ class Login extends Component {
               </div>
               <ul id="nav-mobile" className="right hide-on-med-and-down">
                 <li>
-                  <NavLink className="waves-effect" to="/">
+                  <NavLink className="nav-button waves-effect" to="/">
                     Login
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="waves-effect" exact to="/sign-up">
+                  <NavLink
+                    className="nav-button waves-effect"
+                    exact
+                    to="/sign-up"
+                  >
                     Register
                   </NavLink>
                 </li>
