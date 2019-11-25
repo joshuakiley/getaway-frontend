@@ -18,12 +18,28 @@ class Card extends Component {
           <div className="card-content">
             <span className="card-title">title</span>
             <ul>
-              <li>{this.props.origin}</li>
-              <li>{this.props.depart_date}</li>
-              <li>{this.props.destination}</li>
-              <li>{this.props.return_date}</li>
-              <li>number of changes/transfers</li>
-              <li>${this.props.value}</li>
+              <li>
+                Origin: <span className="flight-info">{this.props.origin}</span>
+              </li>
+              <li>
+                Destination:{" "}
+                <span className="flight-info">{this.props.destination}</span>
+              </li>
+              <li>
+                Departure Date:{" "}
+                <span className="flight-info">{this.props.depart_date}</span>
+              </li>
+              <li>
+                Return Date:{" "}
+                <span className="flight-info">{this.props.return_date}</span>
+              </li>
+              <li>
+                Transfers:{" "}
+                <span className="flight-info">{this.props.transfers}</span>
+              </li>
+              <li>
+                Price: <span className="flight-info">${this.props.value}</span>
+              </li>
             </ul>
           </div>
           <div className="card-action">

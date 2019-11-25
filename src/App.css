@@ -13,6 +13,19 @@ label {
   padding: 13px 10px 0 0;
 }
 
+.flight-search {
+  margin: auto;
+  width: 500px;
+}
+
+.flight-input {
+  text-align: center;
+}
+
+.flight-info {
+  color: pink;
+}
+
 .row {
   margin: 20px;
 }
