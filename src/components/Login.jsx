@@ -9,12 +9,16 @@ class Login extends Component {
     return (
       <Router>
         <header>
+
           <nav className="nav">
-            <div className="nav-wrapper">
-              <div className="brand-logo">
-                GetAway
+
+            <div className="brand-logo">
+              GetAway
                 {/* GA */}
-              </div>
+            </div>
+
+            <div className="nav-wrapper">
+
               <div
                 data-target="slide-out"
                 className="sidenav-trigger hide-on-large-only"
@@ -39,6 +43,9 @@ class Login extends Component {
               </ul>
             </div>
           </nav>
+
+
+
           <ul id="slide-out" className="sidenav">
             <li>
               <div className="user-view">

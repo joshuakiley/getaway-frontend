@@ -41,7 +41,7 @@ class Home extends Component {
 
     async deleteLocation(id) {
         console.log(id);
-        await axios.delete(`${baseURL}/locations/${id}`);
+        await axios.delete(`${baseURL}/location/${id}`);
         const filterLocation = this.state.location.filter((location) => {
             return location._id !== id
         });
@@ -61,13 +61,14 @@ class Home extends Component {
         return (
 
             <div>
+                <br></br>
 
                 <div className='NewForm'>
 
                     <NewForm handleAddLocation={this.handleAddLocation} baseURL={baseURL} />
                 </div>
-
-                <div >
+                <br></br>
+                <div className="row">
                     <Show baseURL={baseURL}
                         location={this.state.location}
                         month={this.state.month}

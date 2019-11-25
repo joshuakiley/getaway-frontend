@@ -26,15 +26,29 @@ class Show extends Component {
     return (
       this.props.location.map(location => {
         return (
-          <div className="middle" key={location._id}>
 
-            <p>{location.location}</p>
-            <p>{location.month}</p>
-            <p>{location.notes}</p>
-            <p>{location.budget}</p>
-            <p>{location.sights}</p>
-            <p>{location.img}</p>
+
+          <div className="col s12 m6 l4">
+            <div className="cardtwo" key={location._id}>
+              <div className="card-content">
+                <span className="card-title">{location.location}</span>
+                <br />
+                <img src={location.img} width="350" height="200"></img>
+                <ul className="cardThree">
+                  <li>Month: {location.month}</li>
+                  <li>Note: {location.notes}</li>
+                  <li>Budget: ${location.budget}</li>
+                  <li>Sights: {location.sights}</li>
+
+                </ul>
+              </div>
+              <div className="card-action">
+
+              </div>
+            </div>
+            <br />
           </div>
+
 
         )
       })
