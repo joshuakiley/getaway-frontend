@@ -66,6 +66,11 @@ class Show extends Component {
                     Delete
                   </button>
                 </td>
+                <td>
+                  <button onClick={() => this.handleEditButton && location}>
+                    Edit
+                  </button>
+                </td>
               </ul>
             </div>
             <div className="card-action"></div>
