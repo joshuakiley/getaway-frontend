@@ -4,7 +4,7 @@
 import React, { Component } from "react";
 import Card from "./Card.jsx";
 import axios from "axios";
-const baseURL = "http://localhost:3003";
+const baseURL = "https://getawaygetaway.herokuapp.com";
 
 class Flights extends Component {
   constructor(props) {
@@ -135,12 +135,12 @@ class Flights extends Component {
               );
             })
           ) : (
-            <Card
-              input1={this.state.origin}
-              input2={this.state.destination}
-              gate="NOT FOUND"
-            />
-          )}
+              <Card
+                input1={this.state.origin}
+                input2={this.state.destination}
+                gate="NOT FOUND"
+              />
+            )}
         </div>
       </div>
     );

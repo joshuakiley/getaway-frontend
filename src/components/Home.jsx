@@ -9,7 +9,7 @@ let baseURL = process.env.REACT_APP_BASEURL;
 if (process.env.NODE_ENV === "development") {
   baseURL = "http://localhost:3003";
 } else {
-  baseURL = "https://fathomless-sierra-68956.herokuapp.com"; //we need to change this once deployed
+  baseURL = "https://getawaygetaway.herokuapp.com"; //we need to change this once deployed
 }
 console.log(baseURL);
 class Home extends Component {

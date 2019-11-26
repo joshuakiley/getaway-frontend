@@ -38,7 +38,7 @@ class EditForm extends Component {
       event.preventDefault();
       console.log("Submitted");
       const locationdID = this.props.location._id;
-      const url = `http://localhost:3003/locations/${locationdID}`;
+      const url = `https://getawaygetaway.herokuapp.com/locations/${locationdID}`;
       const payload = {
         location: this.state.location,
         month: this.state.month,
