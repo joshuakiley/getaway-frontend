@@ -88,7 +88,7 @@ class NewForm extends Component {
 
               <label htmlFor="budget"></label>
               <input
-                type="Number"
+                type="text"
                 id="budget"
                 name="budget"
                 onChange={this.handleChange}
