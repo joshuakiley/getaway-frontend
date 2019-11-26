@@ -5,16 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const colapseInstance = M.Collapsible.init(colapse);
 });
 
-const closeSideNav = () => {
-  const sidenav = document.querySelectorAll(".sidenav");
-  sidenav.close();
-};
+// const closeSideNav = () => {
+//   const sidenav = document.querySelectorAll(".sidenav");
+//   sidenav.close();
+// };
 
 document.querySelectorAll(".sidenavlink").onclick = closeSideNav;
-
-/////
-
-document.addEventListener("DOMContentLoaded", function() {
-  var elems = document.querySelectorAll(".collapsible");
-  var instances = M.Collapsible.init(elems);
-});
