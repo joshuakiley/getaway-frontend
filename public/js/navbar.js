@@ -12,18 +12,9 @@ const closeSideNav = () => {
 
 document.querySelectorAll(".sidenavlink").onclick = closeSideNav;
 
-
-
-
 /////
 
-document.addEventListener('DOMContentLoaded', function () {
-  var elems = document.querySelectorAll('.collapsible');
-  var instances = M.Collapsible.init(elems, options);
-});
-
-// Or with jQuery
-
-$(document).ready(function () {
-  $('.collapsible').collapsible();
+document.addEventListener("DOMContentLoaded", function() {
+  var elems = document.querySelectorAll(".collapsible");
+  var instances = M.Collapsible.init(elems);
 });

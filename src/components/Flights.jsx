@@ -4,7 +4,6 @@
 import React, { Component } from "react";
 import Card from "./Card.jsx";
 import axios from "axios";
-import { withRouter } from "react-router";
 const baseURL = "http://localhost:3003";
 
 class Flights extends Component {
@@ -16,9 +15,9 @@ class Flights extends Component {
       destination: "",
       day: "",
       month: "",
-      year: ""
+      year: "",
+      found: false
     };
-    // this.getFlights = this.getFlights.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -42,7 +41,8 @@ class Flights extends Component {
       console.log("GET FLIGHTS OK");
       const flights = response.data;
       this.setState({
-        flights: flights
+        flights: flights,
+        found: true
       });
       console.log("setState FLIGHTS OK");
     } catch (err) {
@@ -117,18 +117,30 @@ class Flights extends Component {
           <input className="btn" type="submit" value="SEARCH" />
         </form>
         <div className="row">
-          {this.state.flights.map(flight => {
-            return (
-              <Card
-                origin={flight.origin}
-                depart_date={flight.depart_date}
-                destination={flight.destination}
-                return_date={flight.return_date}
-                transfers={flight.number_of_changes}
-                value={flight.value}
-              />
-            );
-          })}
+          {this.state.found ? (
+            this.state.flights.map(flight => {
+              return (
+                <Card
+                  key={flight.found_at}
+                  input1={this.state.origin}
+                  input2={this.state.destination}
+                  origin={flight.origin}
+                  depart_date={flight.depart_date}
+                  destination={flight.destination}
+                  return_date={flight.return_date}
+                  transfers={flight.number_of_changes}
+                  value={flight.value}
+                  gate={flight.gate}
+                />
+              );
+            })
+          ) : (
+            <Card
+              input1={this.state.origin}
+              input2={this.state.destination}
+              gate="NOT FOUND"
+            />
+          )}
         </div>
       </div>
     );
