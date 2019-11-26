@@ -146,16 +146,17 @@ class Creators extends Component {
             <div className="col s10">
               <span className="black-text">
                 <p>
-                  Michele: Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged. It was popularised in the 1960s with
-                  the release of Letraset sheets containing Lorem Ipsum
-                  passages, and more recently with desktop publishing software
-                  like Aldus PageMaker including versions of Lorem Ipsum.
+                  Michele has 10+ years of software experience with well-known
+                  Corporations and several successful venture backed Tech
+                  start-up companies. Certified SCRUM Master utilizing Agile
+                  Processes for software release management and program
+                  management, has a Certification in Software Quality Assurance
+                  thru ISTQB (International Software Testing Quality Board), and
+                  is completing his Full-stack developer Certification with an
+                  expanded technical toolkit including HTML5, CSS3, JavaScript,
+                  Ruby on Rails, RESTful APIs, jQuery, Node.js, React.js, SQL,
+                  GitHub and Herok, thru the prestigious General Assembly
+                  program.
                   <br />
                   <a href="https://www.twitter.com">
                     <img
