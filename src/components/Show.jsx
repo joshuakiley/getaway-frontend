@@ -58,11 +58,8 @@ class Show extends Component {
   render() {
     const { getLocation } = this.props;
     const { editButton, selectedLocation } = this.state;
-    const showEditForm = editButton ? (
+    const showEditForm = editButton &&
       <EditForm location={selectedLocation} getLocation={getLocation} />
-    ) : (
-      <NewForm getLocation={getLocation} />
-    );
     return this.props.location.map(location => {
       return (
         <div className="col s12 m6 l4">
@@ -82,7 +79,7 @@ class Show extends Component {
                 <li>Budget: ${location.budget}</li>
                 <li>Sights: {location.sights}</li>
                 <td>
-                  <button onClick={() => this.deleteLocation(location)}>
+                  <button onClick={() => this.deleteLocation(location._id)}>
                     Delete
                   </button>
 
