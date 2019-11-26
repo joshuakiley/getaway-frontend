@@ -43,44 +43,37 @@ class Show extends Component {
     // });
   }
   render() {
-    return (
-      this.props.location.map(location => {
-        return (
-
-
-          <div className="col s12 m6 l4">
-            <div className="cardtwo" key={location._id}>
-              <div className="card-content">
-                <span className="card-title">{location.location}</span>
-                <br />
-                <img src={location.img} width="350" height="200"></img>
-                <ul className="cardThree">
-                  <li>Month: {location.month}</li>
-                  <li>Note: {location.notes}</li>
-                  <li>Budget: ${location.budget}</li>
-                  <li>Sights: {location.sights}</li>
-                  <td>
-                    <button onClick={() => this.deleteLocation(location._id)}>
-                      <i class="tiny material-icons">delete</i>
-                    </button>
-                  </td>
-                  <td>
-                    <i class="tiny material-icons">edit</i>
-                  </td>
-
-                </ul>
-              </div>
-              <div className="card-action">
-
-              </div>
+    return this.props.location.map(location => {
+      return (
+        <div className="col s12 m6 l4">
+          <div className="cardtwo" key={location._id}>
+            <div className="card-content">
+              <span className="card-title">{location.location}</span>
+              <br />
+              <img
+                src={location.img}
+                width="350"
+                height="200"
+                alt="user uploaded"
+              ></img>
+              <ul className="cardThree">
+                <li>Month: {location.month}</li>
+                <li>Note: {location.notes}</li>
+                <li>Budget: ${location.budget}</li>
+                <li>Sights: {location.sights}</li>
+                <td>
+                  <button onClick={() => this.deleteLocation(location._id)}>
+                    Delete
+                  </button>
+                </td>
+              </ul>
             </div>
-            <br />
+            <div className="card-action"></div>
           </div>
-
-
-        )
-      })
-    )
+          <br />
+        </div>
+      );
+    });
   }
 }
 

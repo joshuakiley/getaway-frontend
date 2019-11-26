@@ -16,13 +16,16 @@ class Card extends Component {
       <div className="col s12 m6 l4">
         <div className="card">
           <div className="card-content">
-            <span className="card-title">title</span>
+            <span className="card-title">
+              {this.props.input1} to {this.props.input2}
+            </span>
             <ul>
               <li>
-                Origin: <span className="flight-info">{this.props.origin}</span>
+                Origin City Code:{" "}
+                <span className="flight-info">{this.props.origin}</span>
               </li>
               <li>
-                Destination:{" "}
+                Destination City Code:{" "}
                 <span className="flight-info">{this.props.destination}</span>
               </li>
               <li>
@@ -34,7 +37,7 @@ class Card extends Component {
                 <span className="flight-info">{this.props.return_date}</span>
               </li>
               <li>
-                Transfers:{" "}
+                Number of Transfers:{" "}
                 <span className="flight-info">{this.props.transfers}</span>
               </li>
               <li>
@@ -43,7 +46,7 @@ class Card extends Component {
             </ul>
           </div>
           <div className="card-action">
-            <a href="#">link to gate</a>
+            <div>Ticket Found At: {this.props.gate}</div>
           </div>
         </div>
       </div>
