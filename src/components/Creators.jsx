@@ -45,7 +45,8 @@ class Creators extends Component {
                   the release of Letraset sheets containing Lorem Ipsum
                   passages, and more recently with desktop publishing software
                   like Aldus PageMaker including versions of Lorem Ipsum.
-                  <br /></p>
+                  <br />
+                </p>
                 <p className="creatoricon">
                   <a href="https://github.com/joshuakiley"
                     target="blank">
@@ -82,10 +83,11 @@ class Creators extends Component {
           </div>
         </div>
 
-
         <div className="col s12 m8 offset-m2 l6 offset-l3"></div>
         <div className="card-panel-create">
+
           <div className="card-panel-create">
+
 
             <div className="row valign-wrapper">
               <div className="col s2">
@@ -101,9 +103,17 @@ class Creators extends Component {
               <div className="col s10">
                 <span className="black-text">
                   <p className="creatortext">
-                    Hello, I am steven and I am a full stack developer. With a background in art and experience as an admin coordinator I like to create beautiful intuitive designs while having the users experience in mind is what sets me apart. While using an array of tools, as HTML 5, JavaScript, CSS, jQuery, RESTful APIs, and more. I am aways learning, always curious, always coding.</p>
+                    Hello, I am steven and I am a full stack developer. With a
+                    background in art and experience as an admin coordinator I
+                    like to create beautiful intuitive designs while having the
+                    users experience in mind is what sets me apart. While using
+                    an array of tools, as HTML 5, JavaScript, CSS, jQuery,
+                    RESTful APIs, and more. I am aways learning, always curious,
+                    always coding.
+                  </p>
                   <br />
                   <p className="creatoricon">
+
                     <a href="https://www.github.com/stetomcon" target="blank">
                       <img
                         src="../images/git.png"
@@ -115,6 +125,7 @@ class Creators extends Component {
 
 
                     <a href="https://www.linkedin.com/in/stevenwolanin/" target="blank">
+
                       <img
                         src="../images/link.png"
                         width="30"
@@ -152,8 +163,27 @@ class Creators extends Component {
             <div className="col s10">
               <span className="black-text">
                 <p className="creatortext">
-                  Michele has 10+ years of software experience with well-known Corporations and several successful venture backed Tech start-up companies. Certified SCRUM Master utilizing Agile Processes for software release management and program management, has a Certification in Software Quality Assurance thru ISTQB (International Software Testing Quality Board), and is completing his Full-stack developer Certification with an expanded technical toolkit including HTML5, CSS3, JavaScript, Ruby on Rails, RESTful APIs, jQuery, Node.js, ReMichele has 10+ years of software experience with well-known Corporations and several successful venture backed Tech start-up companies. Certified SCRUM Master utilizing Agile Processes for software release management and program management, has a Certification in Software Quality Assurance thru ISTQB (International Software Testing Quality Board), and is completing his Full-stack developer Certification with an expanded technical toolkit including HTML5, CSS3, JavaScript, Ruby on Rails, RESTful APIs, jQuery, Node.js, React.js, SQL, GitHub and Heroku, thru the prestigious General Assemblyact.js, SQL, GitHub and Herok, thru the prestigious General Assembly
-                  </p>
+                  Michele has 10+ years of software experience with well-known
+                  Corporations and several successful venture backed Tech
+                  start-up companies. Certified SCRUM Master utilizing Agile
+                  Processes for software release management and program
+                  management, has a Certification in Software Quality Assurance
+                  thru ISTQB (International Software Testing Quality Board), and
+                  is completing his Full-stack developer Certification with an
+                  expanded technical toolkit including HTML5, CSS3, JavaScript,
+                  Ruby on Rails, RESTful APIs, jQuery, Node.js, ReMichele has
+                  10+ years of software experience with well-known Corporations
+                  and several successful venture backed Tech start-up companies.
+                  Certified SCRUM Master utilizing Agile Processes for software
+                  release management and program management, has a Certification
+                  in Software Quality Assurance thru ISTQB (International
+                  Software Testing Quality Board), and is completing his
+                  Full-stack developer Certification with an expanded technical
+                  toolkit including HTML5, CSS3, JavaScript, Ruby on Rails,
+                  RESTful APIs, jQuery, Node.js, React.js, SQL, GitHub and
+                  Heroku, thru the prestigious General Assemblyact.js, SQL,
+                  GitHub and Herok, thru the prestigious General Assembly
+                </p>
                 <p className="creatoricon">
                   <br />
                   <a href="https://github.com/michelecreanza" target="blank">
@@ -163,10 +193,12 @@ class Creators extends Component {
                       height="30"
                       alt="github Link"
                     ></img>
+
                   </a>
 
 
                   <a href="https://www.linkedin.com/in/michele-creanza/" target="_blank">
+
                     <img
                       src="../images/link.png"
                       width="30"
