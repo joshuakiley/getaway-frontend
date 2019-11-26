@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
-// import axios from "axios";
-// const baseURL = "http://localhost:3003";
+import axios from "axios";
+const baseURL = "https://getawaygetaway.herokuapp.com";
 
 class SignUpForm extends Component {
   constructor() {
@@ -13,7 +12,7 @@ class SignUpForm extends Component {
       password: ""
     };
     this.handleChange = this.handleChange.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
@@ -21,21 +20,30 @@ class SignUpForm extends Component {
   }
 
   handleChange(e) {
-    let target = e.target;
-    let value = target.type === "checkbox" ? target.checked : target.value;
-    let name = target.name;
-
-    this.setState({ [name]: value });
+    const { name, value } = e.target;
+    this.setState({
+      [name]: value
+    });
   }
 
-  // async handleSubmit(e) {
-  //   e.preventDefault();
-  //   const response = await axios.post(`${baseURL}/users`, {
-  //     name: this.state.name,
-  //     email: this.state.email,
-  //     password: this.state.password
-  //   });
-  // }
+  async handleSubmit(e) {
+    e.preventDefault();
+    try {
+      const response = await axios.post(`${baseURL}/users`, {
+        name: this.state.name,
+        email: this.state.email,
+        password: this.state.password
+      });
+      this.setState({
+        name: "",
+        email: "",
+        password: ""
+      });
+      console.log("CREATE USER SUCCESS");
+    } catch (err) {
+      console.log("CREATE USER ERROR: ", err.message);
+    }
+  }
 
   render() {
     return (
@@ -90,33 +98,10 @@ class SignUpForm extends Component {
             ></input>
           </div>
 
-          {/* <div className="FormField">
-                        <label className="FormField__CheckboxLabel">
-                            <input
-                                className="FormField__Checkbox"
-                                type="checkbox"
-                                name="hasAgreed"
-                                value={this.state.hasAgreed}
-                                onChange={this.handleChange}
-                            />
-                            I agree all statements in
-              <a
-                                href=""
-                                classname="Formfield__TermsLink"
-                                style={{ color: "white", padding: "5px" }}
-                            >
-                                terms of service
-              </a>
-                        </label>
-                    </div> */}
-
           <div>
             <button className="btn waves-effect blue darken-2" type="submit">
               Sign Up
             </button>
-            {/* <Link to="/sign-up" className="FormField__Link">
-              I'm already a member
-            </Link> */}
           </div>
         </form>
       </div>

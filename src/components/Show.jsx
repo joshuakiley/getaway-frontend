@@ -6,13 +6,11 @@ import axios from "axios";
 import EditForm from "./EditForm.jsx";
 import NewForm from "./NewForm.jsx";
 let baseURL = process.env.REACT_APP_BASEURL;
-
 if (process.env.NODE_ENV === "development") {
   baseURL = "http://localhost:3003";
 } else {
-  baseURL = "https://fathomless-sierra-68956.herokuapp.com"; //we need to change this once deployed
+  baseURL = "https://getawaygetaway.herokuapp.com"; //we need to change this once deployed
 }
-
 class Show extends Component {
   constructor(props) {
     super(props);
@@ -54,7 +52,6 @@ class Show extends Component {
     });
     console.log("Current Location: ", this.state.selectedLocation);
   }
-
   render() {
     const { getLocation } = this.props;
     const { editButton, selectedLocation } = this.state;
@@ -83,7 +80,6 @@ class Show extends Component {
                   <button onClick={() => this.deleteLocation(location._id)}>
                     Delete
                   </button>
-
                   <button onClick={() => this.handleEditButton(location)}>
                     Edit
                   </button>
@@ -92,7 +88,6 @@ class Show extends Component {
             </div>
             <div className="card-action"></div>
           </div>
-
           <br />
           {showEditForm}
         </div>
@@ -100,5 +95,4 @@ class Show extends Component {
     });
   }
 }
-
 export default Show;
