@@ -51,12 +51,9 @@ class NewForm extends Component {
   render() {
     return (
       <div className="boxholder">
-
         <div className="input_holder">
           <div className="container">
             <form onSubmit={this.handleSubmit}>
-
-
               {/* <label htmlFor="img"></label> */}
               <input
                 type="text"
@@ -122,7 +119,6 @@ class NewForm extends Component {
             </form>
           </div>
         </div>
-
       </div>
     );
   }
