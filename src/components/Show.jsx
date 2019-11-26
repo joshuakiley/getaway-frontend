@@ -61,8 +61,11 @@ class Show extends Component {
                   <li>Sights: {location.sights}</li>
                   <td>
                     <button onClick={() => this.deleteLocation(location._id)}>
-                      Delete
-            </button>
+                      <i class="tiny material-icons">delete</i>
+                    </button>
+                  </td>
+                  <td>
+                    <i class="tiny material-icons">edit</i>
                   </td>
 
                 </ul>
