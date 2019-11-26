@@ -17,10 +17,9 @@ let baseURL = "";
 if (process.env.NODE_ENV === "development") {
   baseURL = "http://localhost:3003";
 } else {
-  baseURL = "your heroku bakend url here";
+  baseURL = "https://getawaygetaway.herokuapp.com";
 }
 
-// baseURL = 'https://fathomless-sierra-68956.herokuapp.com'
 console.log("current base URL:", baseURL);
 // import axios from "axios";
 

@@ -11,7 +11,7 @@ import axios from "axios";
 //==============================
 import "./App.css";
 import SignUpForm from "./components/SignUpForm.jsx";
-const baseURL = "http://localhost:3003";
+const baseURL = "https://getawaygetaway.herokuapp.com";
 
 class App extends React.Component {
   constructor(props) {
@@ -92,111 +92,111 @@ class App extends React.Component {
         {this.state.session ? (
           <Main />
         ) : (
-          <div>
-            <header>
-              <nav className="nav">
-                <div className="center brand-logo">GetAway</div>
-                <div className="nav-wrapper">
-                  <div
-                    data-target="slide-out"
-                    className="sidenav-trigger hide-on-large-only"
-                  >
-                    <i className="material-icons">menu</i>
+            <div>
+              <header>
+                <nav className="nav">
+                  <div className="center brand-logo">GetAway</div>
+                  <div className="nav-wrapper">
+                    <div
+                      data-target="slide-out"
+                      className="sidenav-trigger hide-on-large-only"
+                    >
+                      <i className="material-icons">menu</i>
+                    </div>
+                    <ul id="nav-mobile" className="right hide-on-med-and-down">
+                      <li>
+                        <button
+                          onClick={() => this.signUp()}
+                          className="btn waves waves-effect"
+                        >
+                          {this.state.signin ? "Signup" : "Signin"}
+                        </button>
+                      </li>
+                    </ul>
                   </div>
-                  <ul id="nav-mobile" className="right hide-on-med-and-down">
-                    <li>
-                      <button
-                        onClick={() => this.signUp()}
-                        className="btn waves waves-effect"
-                      >
-                        {this.state.signin ? "Signup" : "Signin"}
-                      </button>
-                    </li>
-                  </ul>
+                </nav>
+
+                <ul id="slide-out" className="sidenav">
+                  <li>
+                    <div className="user-view">
+                      <div>
+                        <img
+                          className="circle"
+                          src="/images/download.jpeg"
+                          alt="user"
+                        />
+                      </div>
+
+                      <div>
+                        <span className="white-text name">Bulbasaur</span>
+                      </div>
+
+                      <div>
+                        <span className="white-text email">email@email.com</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    {" "}
+                    <button
+                      onClick={() => this.signUp()}
+                      className="btn waves waves-effect"
+                    >
+                      {this.state.signin ? "Signup" : "Signin"}
+                    </button>
+                  </li>
+                </ul>
+              </header>
+              {this.state.signin ? (
+                <div className="login-body">
+                  <form className="form" onSubmit={this.handleSubmit}>
+                    <div className="form-element">
+                      <label htmlFor="email">
+                        <i className="material-icons">mail</i>
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        className="form-input"
+                        placeholder="Enter your email"
+                        name="email"
+                        value={this.state.email}
+                        onChange={this.handleChange}
+                        autoComplete="off"
+                      ></input>
+                    </div>
+
+                    <div className="form-element">
+                      <label htmlFor="password">
+                        <i className="material-icons">https</i>
+                      </label>
+                      <input
+                        type="password"
+                        id="password"
+                        className="form-input"
+                        placeholder="Enter your password"
+                        name="password"
+                        value={this.state.password}
+                        onChange={this.handleChange}
+                        autoComplete="off"
+                      ></input>
+                    </div>
+
+                    <button
+                      className="btn blue darken-2 waves-effect"
+                      type="submit"
+                    >
+                      Sign In
+                  </button>
+                  </form>
                 </div>
-              </nav>
-
-              <ul id="slide-out" className="sidenav">
-                <li>
-                  <div className="user-view">
-                    <div>
-                      <img
-                        className="circle"
-                        src="/images/download.jpeg"
-                        alt="user"
-                      />
-                    </div>
-
-                    <div>
-                      <span className="white-text name">Bulbasaur</span>
-                    </div>
-
-                    <div>
-                      <span className="white-text email">email@email.com</span>
-                    </div>
+              ) : (
+                  <div>
+                    <SignUpForm />
                   </div>
-                </li>
-                <li>
-                  {" "}
-                  <button
-                    onClick={() => this.signUp()}
-                    className="btn waves waves-effect"
-                  >
-                    {this.state.signin ? "Signup" : "Signin"}
-                  </button>
-                </li>
-              </ul>
-            </header>
-            {this.state.signin ? (
-              <div className="login-body">
-                <form className="form" onSubmit={this.handleSubmit}>
-                  <div className="form-element">
-                    <label htmlFor="email">
-                      <i className="material-icons">mail</i>
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      className="form-input"
-                      placeholder="Enter your email"
-                      name="email"
-                      value={this.state.email}
-                      onChange={this.handleChange}
-                      autoComplete="off"
-                    ></input>
-                  </div>
-
-                  <div className="form-element">
-                    <label htmlFor="password">
-                      <i className="material-icons">https</i>
-                    </label>
-                    <input
-                      type="password"
-                      id="password"
-                      className="form-input"
-                      placeholder="Enter your password"
-                      name="password"
-                      value={this.state.password}
-                      onChange={this.handleChange}
-                      autoComplete="off"
-                    ></input>
-                  </div>
-
-                  <button
-                    className="btn blue darken-2 waves-effect"
-                    type="submit"
-                  >
-                    Sign In
-                  </button>
-                </form>
-              </div>
-            ) : (
-              <div>
-                <SignUpForm />
-              </div>
-            )}
-          </div>
-        )}
+                )}
+            </div>
+          )}
       </div>
     );
   }

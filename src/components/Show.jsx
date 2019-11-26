@@ -9,7 +9,7 @@ let baseURL = process.env.REACT_APP_BASEURL;
 if (process.env.NODE_ENV === "development") {
   baseURL = "http://localhost:3003";
 } else {
-  baseURL = "https://fathomless-sierra-68956.herokuapp.com"; //we need to change this once deployed
+  baseURL = "https://getawaygetaway.herokuapp.com"; //we need to change this once deployed
 }
 class Show extends Component {
   constructor(props) {
@@ -55,9 +55,9 @@ class Show extends Component {
   render() {
     const { getLocation } = this.props;
     const { editButton, selectedLocation } = this.state;
-    const showEditForm = editButton && (
+    const showEditForm = editButton &&
       <EditForm location={selectedLocation} getLocation={getLocation} />
-    );
+
     return this.props.location.map(location => {
       return (
         <div className="col s12 m6 l4">
