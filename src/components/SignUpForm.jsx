@@ -21,21 +21,20 @@ class SignUpForm extends Component {
   }
 
   handleChange(e) {
-    let target = e.target;
-    let value = target.type === "checkbox" ? target.checked : target.value;
-    let name = target.name;
-
-    this.setState({ [name]: value });
+    const { name, value } = e.target;
+    this.setState({
+      [name]: value
+    });
   }
 
-  // async handleSubmit(e) {
-  //   e.preventDefault();
-  //   const response = await axios.post(`${baseURL}/users`, {
-  //     name: this.state.name,
-  //     email: this.state.email,
-  //     password: this.state.password
-  //   });
-  // }
+  async handleSubmit(e) {
+    e.preventDefault();
+    const response = await axios.post(`${baseURL}/users`, {
+      name: this.state.name,
+      email: this.state.email,
+      password: this.state.password
+    });
+  }
 
   render() {
     return (
