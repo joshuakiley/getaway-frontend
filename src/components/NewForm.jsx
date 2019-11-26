@@ -50,72 +50,72 @@ class NewForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor="restaurant"></label>
+      <div className="input_holder">
+        <div className="container">
+          <form onSubmit={this.handleSubmit}>
 
-        <label htmlFor="img"></label>
-        <input
-          type="text"
-          id="img"
-          name="img"
-          onChange={this.handleChange}
-          value={this.state.img}
-          placeholder="img"
-        />
-        <label htmlFor="month"></label>
-        <input
-          type="Date"
-          id="month"
-          name="month"
-          onChange={this.handleChange}
-          value={this.state.month}
-          placeholder="month"
-        />
 
-        <label htmlFor="sights"></label>
-        <input
-          type="text"
-          id="sights"
-          name="sights"
-          onChange={this.handleChange}
-          value={this.state.sights}
-          placeholder="sights"
-        />
+            {/* <label htmlFor="img"></label> */}
+            <input
+              type="text"
+              id="img"
+              name="img"
+              onChange={this.handleChange}
+              value={this.state.img}
+              placeholder="IMG URL *Required*"
+            />
+            <label htmlFor="month"></label>
+            <input
+              type="text"
+              id="month"
+              name="month"
+              onChange={this.handleChange}
+              value={this.state.month}
+              placeholder="month"
+            />
 
-        <label htmlFor="budget"></label>
-        <input
-          type="Number"
-          id="budget"
-          name="budget"
-          onChange={this.handleChange}
-          value={this.state.budget}
-          placeholder="budget"
-        />
+            <label htmlFor="sights"></label>
+            <input
+              type="text"
+              id="sights"
+              name="sights"
+              onChange={this.handleChange}
+              value={this.state.sights}
+              placeholder="sights"
+            />
 
-        <label htmlFor="notes"></label>
-        <input
-          type="text"
-          id="notes"
-          name="notes"
-          onChange={this.handleChange}
-          value={this.state.notes}
-          placeholder="notes"
-        />
-        <label htmlFor="location"></label>
-        <input
-          type="text"
-          id="location"
-          name="location"
-          onChange={this.handleChange}
-          value={this.state.location}
-          placeholder="location"
-        />
-        <input
-          type="submit"
-          value="Add a Location"
-          className="newlocationbutton"
-        />
-      </form>
+            <label htmlFor="budget"></label>
+            <input
+              type="Number"
+              id="budget"
+              name="budget"
+              onChange={this.handleChange}
+              value={this.state.budget}
+              placeholder="budget *Required*"
+            />
+
+            <label htmlFor="notes"></label>
+            <input
+              type="text"
+              id="notes"
+              name="notes"
+              onChange={this.handleChange}
+              value={this.state.notes}
+              placeholder="notes"
+            />
+            <label htmlFor="location"></label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              onChange={this.handleChange}
+              value={this.state.location}
+              placeholder="location *Required*"
+            />
+            <input type="submit" value="Add a Location" className="newlocationbutton" />
+          </form>
+        </div>
+      </div>
     );
   }
 }

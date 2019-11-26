@@ -1,6 +1,6 @@
 body {
-  height: 100vh;
-  background-image: url("/images/iStock-1053244036.jpg");
+  height: 150vh;
+  background-image: url("/images/cloud6.jpg");
   background-position: center;
   /* background-repeat: no-repeat; */
   background-size: cover;
@@ -11,6 +11,19 @@ label {
   user-select: none;
   color: #ffffff;
   padding: 13px 10px 0 0;
+}
+
+.flight-search {
+  margin: auto;
+  width: 500px;
+}
+
+.flight-input {
+  text-align: center;
+}
+
+.flight-info {
+  color: pink;
 }
 
 .row {
@@ -24,6 +37,19 @@ label {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+.cardtwo {
+  border-radius: 25px;
+  text-align: center;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.cardThree {
+  text-align: left;
+  color: #ffffff;
+  margin-left: 2%;
+}
 .card-action {
   border-bottom-right-radius: 25px !important;
   border-bottom-left-radius: 25px !important;
@@ -43,7 +69,7 @@ label {
 }
 
 .nav {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.7);
   box-shadow: 0 0 4px black;
 }
 
@@ -82,7 +108,7 @@ label {
   background-color: #ffffff;
   padding-left: 10%;
   padding-right: 10%;
-  background-image: url("/images/clouds.jpg");
+  background-image: url("/images/cloud6.jpg");
   width: 100vw;
   height: 140vh;
   background-position: center;
@@ -114,11 +140,12 @@ a {
   display: inline-block;
 }
 .nav-wrapper {
-  font-family: "Fugaz One", cursive;
+  font-family: 'Allan', cursive;
+
 }
 .user-view {
   text-align: left;
-  background-image: url("/images/iStock-1053244036.jpg");
+  background-image: url("/images/cloud6.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -129,13 +156,30 @@ a {
 .name,
 .email,
 .brand-logo {
-  user-select: none;
+  font-size: 5em !important;
+  font-family: 'Permanent Marker', cursive;
+  color:rgba(215, 83, 50, 1) !important;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.4) !important;
+  text-align:center !important;
+
+}
+.brand-logo-two {
+  font-size: 2em !important;
+  font-family: 'Permanent Marker', cursive;
+  color:rgba(215, 83, 50, 1) !important;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.4) !important;
+  text-align:center !important;
+
 }
 
 .sidenav-trigger {
   cursor: pointer;
 }
 
+.input_holder{
+margin-left: 20%;
+margin-right:20%;
+}
 .background {
   background-size: cover;
 }
