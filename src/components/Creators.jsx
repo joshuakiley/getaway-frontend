@@ -20,7 +20,7 @@ class Creators extends Component {
           Creators <i className="material-icons">keyboard_arrow_right</i>
         </div>
         <div className="col s12 m8 offset-m2 l6 offset-l3"></div>
-        <div className="card-panel grey lighten-5 z-depth-1">
+        <div className="card-panel-create">
           <div className="row valign-wrapper">
             <div className="col s2">
               <img
@@ -30,6 +30,7 @@ class Creators extends Component {
                 width="150"
                 height="150"
               />
+              Joshua K
             </div>
             <div className="col s10">
               <span className="black-text">
@@ -47,14 +48,19 @@ class Creators extends Component {
                   <br />
                 </p>
                 <p className="creatoricon">
-                  <a href="https://www.twitter.com">
+                  <a href="https://github.com/joshuakiley"
+                    target="blank">
                     <img
-                      src="../images/twitter.png"
+                      src="../images/git.png"
                       width="30"
                       height="30"
-                      alt="Twitter Link"
+                      alt="github Link"
                     ></img>
                   </a>
+
+
+
+
                   <a href="https://www.linkedin.com">
                     <img
                       src="../images/link.png"
@@ -63,14 +69,14 @@ class Creators extends Component {
                       alt="Linkedin Link"
                     ></img>
                   </a>
-                  <a href="https://www.instagram.com">
+                  {/* <a href="https://www.instagram.com">
                     <img
                       src="../images/insta.png"
                       width="30"
                       height="30"
                       alt="Instagram Link"
                     ></img>
-                  </a>
+                  </a> */}
                 </p>
               </span>
             </div>
@@ -79,7 +85,10 @@ class Creators extends Component {
 
         <div className="col s12 m8 offset-m2 l6 offset-l3"></div>
         <div className="card-panel-create">
-          <div className="card-panel grey lighten-5 z-depth-1">
+
+          <div className="card-panel-create">
+
+
             <div className="row valign-wrapper">
               <div className="col s2">
                 <img
@@ -89,6 +98,7 @@ class Creators extends Component {
                   width="150"
                   height="150"
                 />
+                Steven W
               </div>
               <div className="col s10">
                 <span className="black-text">
@@ -103,18 +113,19 @@ class Creators extends Component {
                   </p>
                   <br />
                   <p className="creatoricon">
-                    {/* <a href="https://www.twitter.com">
-                    <img
-                      src="../images/twitter.png"
-                      width="30"
-                      height="30"
-                      alt="Twitter Link"
-                    ></img>
-                  </a> */}
-                    <a
-                      href="https://www.linkedin.com/in/stevenwolanin/"
-                      target="blank"
-                    >
+
+                    <a href="https://www.github.com/stetomcon" target="blank">
+                      <img
+                        src="../images/git.png"
+                        width="30"
+                        height="30"
+                        alt="github Link"
+                      ></img>
+                    </a>
+
+
+                    <a href="https://www.linkedin.com/in/stevenwolanin/" target="blank">
+
                       <img
                         src="../images/link.png"
                         width="30"
@@ -137,7 +148,7 @@ class Creators extends Component {
           </div>
         </div>
         <div className="col s12 m8 offset-m2 l6 offset-l3"></div>
-        <div className="card-panel grey lighten-5 z-depth-1">
+        <div className="card-panel-create">
           <div className="row valign-wrapper">
             <div className="col s2">
               <img
@@ -147,6 +158,7 @@ class Creators extends Component {
                 width="150"
                 height="150"
               />
+              Michele C
             </div>
             <div className="col s10">
               <span className="black-text">
@@ -174,19 +186,19 @@ class Creators extends Component {
                 </p>
                 <p className="creatoricon">
                   <br />
-
-                  {/* <a href="https://www.twitter.com">
+                  <a href="https://github.com/michelecreanza" target="blank">
                     <img
-                      src="../images/twitter.png"
+                      src="../images/git.png"
                       width="30"
                       height="30"
-                      alt="Twitter Link"
+                      alt="github Link"
                     ></img>
-                  </a> */}
-                  <a
-                    href="https://www.linkedin.com/in/michele-creanza/"
-                    target="_blank"
-                  >
+
+                  </a>
+
+
+                  <a href="https://www.linkedin.com/in/michele-creanza/" target="_blank">
+
                     <img
                       src="../images/link.png"
                       width="30"
