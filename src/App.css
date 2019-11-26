@@ -13,6 +13,10 @@ label {
   padding: 13px 10px 0 0;
 }
 
+/* .container{
+  color:#FFFFFF !important;
+} */
+
 .flight-search {
   margin: auto;
   width: 500px;
@@ -74,13 +78,16 @@ label {
 }
 
 .boxholder{
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 4px black;
   padding-left: 2%;
   padding-right:2%;
   margin-right: 20%;
   margin-left: 20%;
   border-radius: 4%;
+  margin-top: 2%;
+  padding-top: 2%;
+
 }
 
 .btn {
@@ -114,8 +121,9 @@ label {
   width: 500px;
 }
 .card-panel-create{
-  background: black !important;
-
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 10px black;
+  color:#FFFFFF;
 }
 .creatorsbody {
   background-color: #ffffff;
@@ -132,10 +140,14 @@ label {
 .creatortext{
   text-align: left;
   margin-left: 5%;
+  color:#FFFFFF;
  
 }
 .creatoricon{
-  text-align: center;
+  text-align: right;
+  color: white;
+  margin-right: 10%;
+
 }
 
 .createheader {
