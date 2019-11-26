@@ -1,18 +1,14 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
-// import axios from "axios";
-// const baseURL = "http://localhost:3003";
 
 class SignInForm extends Component {
   constructor() {
     super();
-
     this.state = {
       email: "",
       password: ""
     };
     this.handleChange = this.handleChange.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
@@ -20,16 +16,16 @@ class SignInForm extends Component {
   }
 
   handleChange(e) {
-    let target = e.target;
-    let value = target.type === "checkbox" ? target.checked : target.value;
-    let name = target.name;
-
-    this.setState({ [name]: value });
+    const { name, value } = e.target;
+    this.setState({
+      [name]: value
+    });
   }
-  // handleSubmit(e) {
-  //   e.preventDefault();
-  //   const response = await Axios.post(`${baseURL}/users`)
-  // }
+
+  handleSubmit(e) {
+    e.preventDefault();
+  }
+
   render() {
     return (
       <div className="login-body">
@@ -69,9 +65,6 @@ class SignInForm extends Component {
           <button className="btn blue darken-2 waves-effect" type="submit">
             Sign In
           </button>
-          {/* <Link to="/" className="FormField__Link">
-            Create an account
-          </Link> */}
         </form>
       </div>
     );

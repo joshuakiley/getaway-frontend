@@ -27,13 +27,15 @@ console.log("current base URL:", baseURL);
 class Main extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      name: ""
-    };
+    this.logout = this.logout.bind(this);
   }
-
   componentDidMount() {
     console.log("Main Mounted");
+  }
+
+  logout() {
+    localStorage.removeItem("user");
+    // window.location.reload(true);
   }
 
   render() {
@@ -42,14 +44,7 @@ class Main extends Component {
         <header>
           <nav className="nav">
             <div className="nav-wrapper">
-              <div className="brand-logo">
-                {/* <img
-                  className="brand-logo-img"
-                  src="../images/logo2.png"
-                  alt="Getaway Logo"
-                ></img> */}
-                GA
-              </div>
+              <div className="brand-logo">GA</div>
               <div
                 data-target="slide-out"
                 className="sidenav-trigger hide-on-large-only"
@@ -62,16 +57,6 @@ class Main extends Component {
                     Home
                   </Link>
                 </li>
-                {/* <li>
-                  <Link className="waves-effect" to="/new">
-                    New Location
-                  </Link>
-                </li> */}
-                {/* <li>
-                  <Link className="waves-effect" to="/locations">
-                    My Locations
-                  </Link>
-                </li> */}
                 <li>
                   <Link className="waves-effect" to="/flights">
                     Flights
@@ -81,6 +66,9 @@ class Main extends Component {
                   <Link className="waves-effect" to="/creators">
                     Creators
                   </Link>
+                </li>
+                <li>
+                  <button onClick={() => this.logout()}>Logout</button>
                 </li>
               </ul>
             </div>
@@ -114,16 +102,6 @@ class Main extends Component {
               <div className="divider"></div>
             </li>
             <li>
-              <Link className="waves-effect" to="/new">
-                <i className="material-icons">add</i>New Location
-              </Link>
-            </li>
-            <li>
-              <Link className="waves-effect" to="/locations">
-                <i className="material-icons">map</i>My Locations
-              </Link>
-            </li>
-            <li>
               <Link className="waves-effect" to="/flights">
                 <i className="material-icons">airplanemode_active</i>Flights
               </Link>
@@ -133,13 +111,12 @@ class Main extends Component {
                 <i className="material-icons">code</i>Creators
               </Link>
             </li>
+            <button onClick={() => this.logout()}>Logout</button>
           </ul>
         </header>
 
         <main>
           <Route path="/" exact component={Home} />
-          {/* <Route path="/new" exact component={New} />
-          <Route path="/locations" exact component={Locations} /> */}
           <Route path="/flights" exact component={Flights} />
           <Route path="/creators" exact component={Creators} />
         </main>
