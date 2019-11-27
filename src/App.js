@@ -21,7 +21,7 @@ class App extends React.Component {
       user: "",
       email: "",
       password: "",
-      id: "",
+      userid: "",
       signin: true
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -38,7 +38,7 @@ class App extends React.Component {
         session: dataObj.session,
         user: dataObj.user,
         email: dataObj.email,
-        id: dataObj.id
+        userid: dataObj.userid
       });
     }
   }
@@ -63,7 +63,7 @@ class App extends React.Component {
         session: true,
         user: response.data.name,
         email: response.data.email,
-        id: response.data._id
+        userid: response.data._id
       });
       localStorage.setItem(
         "user",
@@ -71,7 +71,7 @@ class App extends React.Component {
           session: this.state.session,
           user: this.state.user,
           email: this.state.email,
-          id: this.state.id
+          userid: this.state.userid
         })
       );
       console.log(response);
